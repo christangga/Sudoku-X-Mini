@@ -1,0 +1,2133 @@
+TRUE
+CLIPS> (batch "F:/Dropbox/christangga/School/Institut Teknologi Bandung/Class/Semester 5/IF3170 Inteligensi Buatan/Tubes/01/X-Mini/runbench.bat")
+TRUE
+CLIPS> (clear)
+==> f-0     (initial-fact)
+CLIPS> (unwatch all)
+CLIPS> (watch facts)
+CLIPS> (watch rules)
+CLIPS> (load "sudoku.clp")
+%%%%%%%%************
+TRUE
+CLIPS> (load "solve.clp")
+%%*********************************************************
+TRUE
+CLIPS> (load "output-frills.clp")
+:***********
+TRUE
+CLIPS> (load "puzzles//grid2x3-p3.clp")
+*
+TRUE
+CLIPS> (reset)
+<== f-0     (initial-fact)
+==> f-0     (initial-fact)
+CLIPS> (run)
+FIRE    1 initialize-techniques: *
+==> f-1     (technique (name Naked-Single) (rank 1))
+==> f-2     (technique (name Hidden-Single) (rank 2))
+==> f-3     (technique (name Locked-Candidate-Single-Line) (rank 3))
+==> f-4     (technique (name Locked-Candidate-Multiple-Lines) (rank 4))
+==> f-5     (technique (name Naked-Pairs) (rank 5))
+==> f-6     (technique (name Hidden-Pairs) (rank 6))
+==> f-7     (technique (name X-Wing) (rank 7))
+==> f-8     (technique (name Naked-Triples) (rank 8))
+==> f-9     (technique (name Hidden-Triples) (rank 9))
+==> f-10    (technique (name XY-Wing) (rank 10))
+==> f-11    (technique (name Swordfish) (rank 11))
+==> f-12    (technique (name Duplicate-Color) (rank 12))
+==> f-13    (technique (name Color-Conjugate-Pair) (rank 13))
+==> f-14    (technique (name Multi-Color-Type-1) (rank 14))
+==> f-15    (technique (name Multi-Color-Type-2) (rank 15))
+==> f-16    (technique (name Forced-Chain-Convergence) (rank 16))
+==> f-17    (technique (name Forced-Chain-XY) (rank 17))
+==> f-18    (technique (name Unique-Rectangle) (rank 18))
+FIRE    2 initialize: *
+==> f-19    (phase grid-values)
+==> f-20    (size-value (size 1) (value 1))
+==> f-21    (size-value (size 2) (value 2))
+==> f-22    (size-value (size 2) (value 3))
+==> f-23    (size-value (size 2) (value 4))
+==> f-24    (size-value (size 3) (value 5))
+==> f-25    (size-value (size 3) (value 6))
+FIRE    3 grid-values: f-19
+<== f-19    (phase grid-values)
+==> f-26    (phase expand-any)
+==> f-27    (size 3)
+==> f-28    (possible (row 1) (column 1) (value any) (group 1) (diagonal 1) (id 1))
+==> f-29    (possible (row 1) (column 2) (value any) (group 1) (diagonal 0) (id 2))
+==> f-30    (possible (row 1) (column 3) (value 1) (group 1) (diagonal 0) (id 3))
+==> f-31    (possible (row 2) (column 1) (value any) (group 1) (diagonal 0) (id 4))
+==> f-32    (possible (row 2) (column 2) (value any) (group 1) (diagonal 1) (id 5))
+==> f-33    (possible (row 2) (column 3) (value any) (group 1) (diagonal 0) (id 6))
+==> f-34    (possible (row 1) (column 4) (value any) (group 2) (diagonal 0) (id 7))
+==> f-35    (possible (row 1) (column 5) (value any) (group 2) (diagonal 0) (id 8))
+==> f-36    (possible (row 1) (column 6) (value any) (group 2) (diagonal 2) (id 9))
+==> f-37    (possible (row 2) (column 4) (value 1) (group 2) (diagonal 0) (id 10))
+==> f-38    (possible (row 2) (column 5) (value 3) (group 2) (diagonal 2) (id 11))
+==> f-39    (possible (row 2) (column 6) (value 5) (group 2) (diagonal 0) (id 12))
+==> f-40    (possible (row 3) (column 1) (value any) (group 3) (diagonal 0) (id 13))
+==> f-41    (possible (row 3) (column 2) (value 6) (group 3) (diagonal 0) (id 14))
+==> f-42    (possible (row 3) (column 3) (value any) (group 3) (diagonal 1) (id 15))
+==> f-43    (possible (row 4) (column 1) (value 4) (group 3) (diagonal 0) (id 16))
+==> f-44    (possible (row 4) (column 2) (value any) (group 3) (diagonal 0) (id 17))
+==> f-45    (possible (row 4) (column 3) (value any) (group 3) (diagonal 2) (id 18))
+==> f-46    (possible (row 3) (column 4) (value 4) (group 4) (diagonal 2) (id 19))
+==> f-47    (possible (row 3) (column 5) (value any) (group 4) (diagonal 0) (id 20))
+==> f-48    (possible (row 3) (column 6) (value 2) (group 4) (diagonal 0) (id 21))
+==> f-49    (possible (row 4) (column 4) (value any) (group 4) (diagonal 1) (id 22))
+==> f-50    (possible (row 4) (column 5) (value any) (group 4) (diagonal 0) (id 23))
+==> f-51    (possible (row 4) (column 6) (value any) (group 4) (diagonal 0) (id 24))
+==> f-52    (possible (row 5) (column 1) (value 3) (group 5) (diagonal 0) (id 25))
+==> f-53    (possible (row 5) (column 2) (value any) (group 5) (diagonal 2) (id 26))
+==> f-54    (possible (row 5) (column 3) (value any) (group 5) (diagonal 0) (id 27))
+==> f-55    (possible (row 6) (column 1) (value any) (group 5) (diagonal 2) (id 28))
+==> f-56    (possible (row 6) (column 2) (value any) (group 5) (diagonal 0) (id 29))
+==> f-57    (possible (row 6) (column 3) (value any) (group 5) (diagonal 0) (id 30))
+==> f-58    (possible (row 5) (column 4) (value any) (group 6) (diagonal 0) (id 31))
+==> f-59    (possible (row 5) (column 5) (value any) (group 6) (diagonal 1) (id 32))
+==> f-60    (possible (row 5) (column 6) (value any) (group 6) (diagonal 0) (id 33))
+==> f-61    (possible (row 6) (column 4) (value any) (group 6) (diagonal 0) (id 34))
+==> f-62    (possible (row 6) (column 5) (value 6) (group 6) (diagonal 0) (id 35))
+==> f-63    (possible (row 6) (column 6) (value any) (group 6) (diagonal 1) (id 36))
+FIRE    4 expand-any-start: f-26,f-28,*
+==> f-64    (iterate-rc (row 1) (column 1) (index 1))
+FIRE    5 expand-any: f-26,f-28,*,f-27,f-64,f-20,*
+==> f-65    (possible (row 1) (column 1) (value 1) (group 1) (diagonal 1) (id 1))
+<== f-64    (iterate-rc (row 1) (column 1) (index 1))
+==> f-66    (iterate-rc (row 1) (column 1) (index 2))
+FIRE    6 expand-any: f-26,f-28,*,f-27,f-66,f-21,*
+==> f-67    (possible (row 1) (column 1) (value 2) (group 1) (diagonal 1) (id 1))
+<== f-66    (iterate-rc (row 1) (column 1) (index 2))
+==> f-68    (iterate-rc (row 1) (column 1) (index 3))
+FIRE    7 expand-any: f-26,f-28,*,f-27,f-68,f-22,*
+==> f-69    (possible (row 1) (column 1) (value 3) (group 1) (diagonal 1) (id 1))
+<== f-68    (iterate-rc (row 1) (column 1) (index 3))
+==> f-70    (iterate-rc (row 1) (column 1) (index 4))
+FIRE    8 expand-any: f-26,f-28,*,f-27,f-70,f-23,*
+==> f-71    (possible (row 1) (column 1) (value 4) (group 1) (diagonal 1) (id 1))
+<== f-70    (iterate-rc (row 1) (column 1) (index 4))
+==> f-72    (iterate-rc (row 1) (column 1) (index 5))
+FIRE    9 expand-any: f-26,f-28,*,f-27,f-72,f-24,*
+==> f-73    (possible (row 1) (column 1) (value 5) (group 1) (diagonal 1) (id 1))
+<== f-72    (iterate-rc (row 1) (column 1) (index 5))
+==> f-74    (iterate-rc (row 1) (column 1) (index 6))
+FIRE   10 expand-any: f-26,f-28,*,f-27,f-74,f-25,*
+==> f-75    (possible (row 1) (column 1) (value 6) (group 1) (diagonal 1) (id 1))
+<== f-74    (iterate-rc (row 1) (column 1) (index 6))
+==> f-76    (iterate-rc (row 1) (column 1) (index 7))
+FIRE   11 position-expanded: f-26,f-28,f-27,f-76,*
+==> f-77    (unsolved (row 1) (column 1))
+<== f-28    (possible (row 1) (column 1) (value any) (group 1) (diagonal 1) (id 1))
+<== f-76    (iterate-rc (row 1) (column 1) (index 7))
+FIRE   12 expand-any-start: f-26,f-29,*
+==> f-78    (iterate-rc (row 1) (column 2) (index 1))
+FIRE   13 expand-any: f-26,f-29,*,f-27,f-78,f-20,*
+==> f-79    (possible (row 1) (column 2) (value 1) (group 1) (diagonal 0) (id 2))
+<== f-78    (iterate-rc (row 1) (column 2) (index 1))
+==> f-80    (iterate-rc (row 1) (column 2) (index 2))
+FIRE   14 expand-any: f-26,f-29,*,f-27,f-80,f-21,*
+==> f-81    (possible (row 1) (column 2) (value 2) (group 1) (diagonal 0) (id 2))
+<== f-80    (iterate-rc (row 1) (column 2) (index 2))
+==> f-82    (iterate-rc (row 1) (column 2) (index 3))
+FIRE   15 expand-any: f-26,f-29,*,f-27,f-82,f-22,*
+==> f-83    (possible (row 1) (column 2) (value 3) (group 1) (diagonal 0) (id 2))
+<== f-82    (iterate-rc (row 1) (column 2) (index 3))
+==> f-84    (iterate-rc (row 1) (column 2) (index 4))
+FIRE   16 expand-any: f-26,f-29,*,f-27,f-84,f-23,*
+==> f-85    (possible (row 1) (column 2) (value 4) (group 1) (diagonal 0) (id 2))
+<== f-84    (iterate-rc (row 1) (column 2) (index 4))
+==> f-86    (iterate-rc (row 1) (column 2) (index 5))
+FIRE   17 expand-any: f-26,f-29,*,f-27,f-86,f-24,*
+==> f-87    (possible (row 1) (column 2) (value 5) (group 1) (diagonal 0) (id 2))
+<== f-86    (iterate-rc (row 1) (column 2) (index 5))
+==> f-88    (iterate-rc (row 1) (column 2) (index 6))
+FIRE   18 expand-any: f-26,f-29,*,f-27,f-88,f-25,*
+==> f-89    (possible (row 1) (column 2) (value 6) (group 1) (diagonal 0) (id 2))
+<== f-88    (iterate-rc (row 1) (column 2) (index 6))
+==> f-90    (iterate-rc (row 1) (column 2) (index 7))
+FIRE   19 position-expanded: f-26,f-29,f-27,f-90,*
+==> f-91    (unsolved (row 1) (column 2))
+<== f-29    (possible (row 1) (column 2) (value any) (group 1) (diagonal 0) (id 2))
+<== f-90    (iterate-rc (row 1) (column 2) (index 7))
+FIRE   20 expand-any-start: f-26,f-31,*
+==> f-92    (iterate-rc (row 2) (column 1) (index 1))
+FIRE   21 expand-any: f-26,f-31,*,f-27,f-92,f-20,*
+==> f-93    (possible (row 2) (column 1) (value 1) (group 1) (diagonal 0) (id 4))
+<== f-92    (iterate-rc (row 2) (column 1) (index 1))
+==> f-94    (iterate-rc (row 2) (column 1) (index 2))
+FIRE   22 expand-any: f-26,f-31,*,f-27,f-94,f-21,*
+==> f-95    (possible (row 2) (column 1) (value 2) (group 1) (diagonal 0) (id 4))
+<== f-94    (iterate-rc (row 2) (column 1) (index 2))
+==> f-96    (iterate-rc (row 2) (column 1) (index 3))
+FIRE   23 expand-any: f-26,f-31,*,f-27,f-96,f-22,*
+==> f-97    (possible (row 2) (column 1) (value 3) (group 1) (diagonal 0) (id 4))
+<== f-96    (iterate-rc (row 2) (column 1) (index 3))
+==> f-98    (iterate-rc (row 2) (column 1) (index 4))
+FIRE   24 expand-any: f-26,f-31,*,f-27,f-98,f-23,*
+==> f-99    (possible (row 2) (column 1) (value 4) (group 1) (diagonal 0) (id 4))
+<== f-98    (iterate-rc (row 2) (column 1) (index 4))
+==> f-100   (iterate-rc (row 2) (column 1) (index 5))
+FIRE   25 expand-any: f-26,f-31,*,f-27,f-100,f-24,*
+==> f-101   (possible (row 2) (column 1) (value 5) (group 1) (diagonal 0) (id 4))
+<== f-100   (iterate-rc (row 2) (column 1) (index 5))
+==> f-102   (iterate-rc (row 2) (column 1) (index 6))
+FIRE   26 expand-any: f-26,f-31,*,f-27,f-102,f-25,*
+==> f-103   (possible (row 2) (column 1) (value 6) (group 1) (diagonal 0) (id 4))
+<== f-102   (iterate-rc (row 2) (column 1) (index 6))
+==> f-104   (iterate-rc (row 2) (column 1) (index 7))
+FIRE   27 position-expanded: f-26,f-31,f-27,f-104,*
+==> f-105   (unsolved (row 2) (column 1))
+<== f-31    (possible (row 2) (column 1) (value any) (group 1) (diagonal 0) (id 4))
+<== f-104   (iterate-rc (row 2) (column 1) (index 7))
+FIRE   28 expand-any-start: f-26,f-32,*
+==> f-106   (iterate-rc (row 2) (column 2) (index 1))
+FIRE   29 expand-any: f-26,f-32,*,f-27,f-106,f-20,*
+==> f-107   (possible (row 2) (column 2) (value 1) (group 1) (diagonal 1) (id 5))
+<== f-106   (iterate-rc (row 2) (column 2) (index 1))
+==> f-108   (iterate-rc (row 2) (column 2) (index 2))
+FIRE   30 expand-any: f-26,f-32,*,f-27,f-108,f-21,*
+==> f-109   (possible (row 2) (column 2) (value 2) (group 1) (diagonal 1) (id 5))
+<== f-108   (iterate-rc (row 2) (column 2) (index 2))
+==> f-110   (iterate-rc (row 2) (column 2) (index 3))
+FIRE   31 expand-any: f-26,f-32,*,f-27,f-110,f-22,*
+==> f-111   (possible (row 2) (column 2) (value 3) (group 1) (diagonal 1) (id 5))
+<== f-110   (iterate-rc (row 2) (column 2) (index 3))
+==> f-112   (iterate-rc (row 2) (column 2) (index 4))
+FIRE   32 expand-any: f-26,f-32,*,f-27,f-112,f-23,*
+==> f-113   (possible (row 2) (column 2) (value 4) (group 1) (diagonal 1) (id 5))
+<== f-112   (iterate-rc (row 2) (column 2) (index 4))
+==> f-114   (iterate-rc (row 2) (column 2) (index 5))
+FIRE   33 expand-any: f-26,f-32,*,f-27,f-114,f-24,*
+==> f-115   (possible (row 2) (column 2) (value 5) (group 1) (diagonal 1) (id 5))
+<== f-114   (iterate-rc (row 2) (column 2) (index 5))
+==> f-116   (iterate-rc (row 2) (column 2) (index 6))
+FIRE   34 expand-any: f-26,f-32,*,f-27,f-116,f-25,*
+==> f-117   (possible (row 2) (column 2) (value 6) (group 1) (diagonal 1) (id 5))
+<== f-116   (iterate-rc (row 2) (column 2) (index 6))
+==> f-118   (iterate-rc (row 2) (column 2) (index 7))
+FIRE   35 position-expanded: f-26,f-32,f-27,f-118,*
+==> f-119   (unsolved (row 2) (column 2))
+<== f-32    (possible (row 2) (column 2) (value any) (group 1) (diagonal 1) (id 5))
+<== f-118   (iterate-rc (row 2) (column 2) (index 7))
+FIRE   36 expand-any-start: f-26,f-33,*
+==> f-120   (iterate-rc (row 2) (column 3) (index 1))
+FIRE   37 expand-any: f-26,f-33,*,f-27,f-120,f-20,*
+==> f-121   (possible (row 2) (column 3) (value 1) (group 1) (diagonal 0) (id 6))
+<== f-120   (iterate-rc (row 2) (column 3) (index 1))
+==> f-122   (iterate-rc (row 2) (column 3) (index 2))
+FIRE   38 expand-any: f-26,f-33,*,f-27,f-122,f-21,*
+==> f-123   (possible (row 2) (column 3) (value 2) (group 1) (diagonal 0) (id 6))
+<== f-122   (iterate-rc (row 2) (column 3) (index 2))
+==> f-124   (iterate-rc (row 2) (column 3) (index 3))
+FIRE   39 expand-any: f-26,f-33,*,f-27,f-124,f-22,*
+==> f-125   (possible (row 2) (column 3) (value 3) (group 1) (diagonal 0) (id 6))
+<== f-124   (iterate-rc (row 2) (column 3) (index 3))
+==> f-126   (iterate-rc (row 2) (column 3) (index 4))
+FIRE   40 expand-any: f-26,f-33,*,f-27,f-126,f-23,*
+==> f-127   (possible (row 2) (column 3) (value 4) (group 1) (diagonal 0) (id 6))
+<== f-126   (iterate-rc (row 2) (column 3) (index 4))
+==> f-128   (iterate-rc (row 2) (column 3) (index 5))
+FIRE   41 expand-any: f-26,f-33,*,f-27,f-128,f-24,*
+==> f-129   (possible (row 2) (column 3) (value 5) (group 1) (diagonal 0) (id 6))
+<== f-128   (iterate-rc (row 2) (column 3) (index 5))
+==> f-130   (iterate-rc (row 2) (column 3) (index 6))
+FIRE   42 expand-any: f-26,f-33,*,f-27,f-130,f-25,*
+==> f-131   (possible (row 2) (column 3) (value 6) (group 1) (diagonal 0) (id 6))
+<== f-130   (iterate-rc (row 2) (column 3) (index 6))
+==> f-132   (iterate-rc (row 2) (column 3) (index 7))
+FIRE   43 position-expanded: f-26,f-33,f-27,f-132,*
+==> f-133   (unsolved (row 2) (column 3))
+<== f-33    (possible (row 2) (column 3) (value any) (group 1) (diagonal 0) (id 6))
+<== f-132   (iterate-rc (row 2) (column 3) (index 7))
+FIRE   44 expand-any-start: f-26,f-34,*
+==> f-134   (iterate-rc (row 1) (column 4) (index 1))
+FIRE   45 expand-any: f-26,f-34,*,f-27,f-134,f-20,*
+==> f-135   (possible (row 1) (column 4) (value 1) (group 2) (diagonal 0) (id 7))
+<== f-134   (iterate-rc (row 1) (column 4) (index 1))
+==> f-136   (iterate-rc (row 1) (column 4) (index 2))
+FIRE   46 expand-any: f-26,f-34,*,f-27,f-136,f-21,*
+==> f-137   (possible (row 1) (column 4) (value 2) (group 2) (diagonal 0) (id 7))
+<== f-136   (iterate-rc (row 1) (column 4) (index 2))
+==> f-138   (iterate-rc (row 1) (column 4) (index 3))
+FIRE   47 expand-any: f-26,f-34,*,f-27,f-138,f-22,*
+==> f-139   (possible (row 1) (column 4) (value 3) (group 2) (diagonal 0) (id 7))
+<== f-138   (iterate-rc (row 1) (column 4) (index 3))
+==> f-140   (iterate-rc (row 1) (column 4) (index 4))
+FIRE   48 expand-any: f-26,f-34,*,f-27,f-140,f-23,*
+==> f-141   (possible (row 1) (column 4) (value 4) (group 2) (diagonal 0) (id 7))
+<== f-140   (iterate-rc (row 1) (column 4) (index 4))
+==> f-142   (iterate-rc (row 1) (column 4) (index 5))
+FIRE   49 expand-any: f-26,f-34,*,f-27,f-142,f-24,*
+==> f-143   (possible (row 1) (column 4) (value 5) (group 2) (diagonal 0) (id 7))
+<== f-142   (iterate-rc (row 1) (column 4) (index 5))
+==> f-144   (iterate-rc (row 1) (column 4) (index 6))
+FIRE   50 expand-any: f-26,f-34,*,f-27,f-144,f-25,*
+==> f-145   (possible (row 1) (column 4) (value 6) (group 2) (diagonal 0) (id 7))
+<== f-144   (iterate-rc (row 1) (column 4) (index 6))
+==> f-146   (iterate-rc (row 1) (column 4) (index 7))
+FIRE   51 position-expanded: f-26,f-34,f-27,f-146,*
+==> f-147   (unsolved (row 1) (column 4))
+<== f-34    (possible (row 1) (column 4) (value any) (group 2) (diagonal 0) (id 7))
+<== f-146   (iterate-rc (row 1) (column 4) (index 7))
+FIRE   52 expand-any-start: f-26,f-35,*
+==> f-148   (iterate-rc (row 1) (column 5) (index 1))
+FIRE   53 expand-any: f-26,f-35,*,f-27,f-148,f-20,*
+==> f-149   (possible (row 1) (column 5) (value 1) (group 2) (diagonal 0) (id 8))
+<== f-148   (iterate-rc (row 1) (column 5) (index 1))
+==> f-150   (iterate-rc (row 1) (column 5) (index 2))
+FIRE   54 expand-any: f-26,f-35,*,f-27,f-150,f-21,*
+==> f-151   (possible (row 1) (column 5) (value 2) (group 2) (diagonal 0) (id 8))
+<== f-150   (iterate-rc (row 1) (column 5) (index 2))
+==> f-152   (iterate-rc (row 1) (column 5) (index 3))
+FIRE   55 expand-any: f-26,f-35,*,f-27,f-152,f-22,*
+==> f-153   (possible (row 1) (column 5) (value 3) (group 2) (diagonal 0) (id 8))
+<== f-152   (iterate-rc (row 1) (column 5) (index 3))
+==> f-154   (iterate-rc (row 1) (column 5) (index 4))
+FIRE   56 expand-any: f-26,f-35,*,f-27,f-154,f-23,*
+==> f-155   (possible (row 1) (column 5) (value 4) (group 2) (diagonal 0) (id 8))
+<== f-154   (iterate-rc (row 1) (column 5) (index 4))
+==> f-156   (iterate-rc (row 1) (column 5) (index 5))
+FIRE   57 expand-any: f-26,f-35,*,f-27,f-156,f-24,*
+==> f-157   (possible (row 1) (column 5) (value 5) (group 2) (diagonal 0) (id 8))
+<== f-156   (iterate-rc (row 1) (column 5) (index 5))
+==> f-158   (iterate-rc (row 1) (column 5) (index 6))
+FIRE   58 expand-any: f-26,f-35,*,f-27,f-158,f-25,*
+==> f-159   (possible (row 1) (column 5) (value 6) (group 2) (diagonal 0) (id 8))
+<== f-158   (iterate-rc (row 1) (column 5) (index 6))
+==> f-160   (iterate-rc (row 1) (column 5) (index 7))
+FIRE   59 position-expanded: f-26,f-35,f-27,f-160,*
+==> f-161   (unsolved (row 1) (column 5))
+<== f-35    (possible (row 1) (column 5) (value any) (group 2) (diagonal 0) (id 8))
+<== f-160   (iterate-rc (row 1) (column 5) (index 7))
+FIRE   60 expand-any-start: f-26,f-36,*
+==> f-162   (iterate-rc (row 1) (column 6) (index 1))
+FIRE   61 expand-any: f-26,f-36,*,f-27,f-162,f-20,*
+==> f-163   (possible (row 1) (column 6) (value 1) (group 2) (diagonal 2) (id 9))
+<== f-162   (iterate-rc (row 1) (column 6) (index 1))
+==> f-164   (iterate-rc (row 1) (column 6) (index 2))
+FIRE   62 expand-any: f-26,f-36,*,f-27,f-164,f-21,*
+==> f-165   (possible (row 1) (column 6) (value 2) (group 2) (diagonal 2) (id 9))
+<== f-164   (iterate-rc (row 1) (column 6) (index 2))
+==> f-166   (iterate-rc (row 1) (column 6) (index 3))
+FIRE   63 expand-any: f-26,f-36,*,f-27,f-166,f-22,*
+==> f-167   (possible (row 1) (column 6) (value 3) (group 2) (diagonal 2) (id 9))
+<== f-166   (iterate-rc (row 1) (column 6) (index 3))
+==> f-168   (iterate-rc (row 1) (column 6) (index 4))
+FIRE   64 expand-any: f-26,f-36,*,f-27,f-168,f-23,*
+==> f-169   (possible (row 1) (column 6) (value 4) (group 2) (diagonal 2) (id 9))
+<== f-168   (iterate-rc (row 1) (column 6) (index 4))
+==> f-170   (iterate-rc (row 1) (column 6) (index 5))
+FIRE   65 expand-any: f-26,f-36,*,f-27,f-170,f-24,*
+==> f-171   (possible (row 1) (column 6) (value 5) (group 2) (diagonal 2) (id 9))
+<== f-170   (iterate-rc (row 1) (column 6) (index 5))
+==> f-172   (iterate-rc (row 1) (column 6) (index 6))
+FIRE   66 expand-any: f-26,f-36,*,f-27,f-172,f-25,*
+==> f-173   (possible (row 1) (column 6) (value 6) (group 2) (diagonal 2) (id 9))
+<== f-172   (iterate-rc (row 1) (column 6) (index 6))
+==> f-174   (iterate-rc (row 1) (column 6) (index 7))
+FIRE   67 position-expanded: f-26,f-36,f-27,f-174,*
+==> f-175   (unsolved (row 1) (column 6))
+<== f-36    (possible (row 1) (column 6) (value any) (group 2) (diagonal 2) (id 9))
+<== f-174   (iterate-rc (row 1) (column 6) (index 7))
+FIRE   68 expand-any-start: f-26,f-40,*
+==> f-176   (iterate-rc (row 3) (column 1) (index 1))
+FIRE   69 expand-any: f-26,f-40,*,f-27,f-176,f-20,*
+==> f-177   (possible (row 3) (column 1) (value 1) (group 3) (diagonal 0) (id 13))
+<== f-176   (iterate-rc (row 3) (column 1) (index 1))
+==> f-178   (iterate-rc (row 3) (column 1) (index 2))
+FIRE   70 expand-any: f-26,f-40,*,f-27,f-178,f-21,*
+==> f-179   (possible (row 3) (column 1) (value 2) (group 3) (diagonal 0) (id 13))
+<== f-178   (iterate-rc (row 3) (column 1) (index 2))
+==> f-180   (iterate-rc (row 3) (column 1) (index 3))
+FIRE   71 expand-any: f-26,f-40,*,f-27,f-180,f-22,*
+==> f-181   (possible (row 3) (column 1) (value 3) (group 3) (diagonal 0) (id 13))
+<== f-180   (iterate-rc (row 3) (column 1) (index 3))
+==> f-182   (iterate-rc (row 3) (column 1) (index 4))
+FIRE   72 expand-any: f-26,f-40,*,f-27,f-182,f-23,*
+==> f-183   (possible (row 3) (column 1) (value 4) (group 3) (diagonal 0) (id 13))
+<== f-182   (iterate-rc (row 3) (column 1) (index 4))
+==> f-184   (iterate-rc (row 3) (column 1) (index 5))
+FIRE   73 expand-any: f-26,f-40,*,f-27,f-184,f-24,*
+==> f-185   (possible (row 3) (column 1) (value 5) (group 3) (diagonal 0) (id 13))
+<== f-184   (iterate-rc (row 3) (column 1) (index 5))
+==> f-186   (iterate-rc (row 3) (column 1) (index 6))
+FIRE   74 expand-any: f-26,f-40,*,f-27,f-186,f-25,*
+==> f-187   (possible (row 3) (column 1) (value 6) (group 3) (diagonal 0) (id 13))
+<== f-186   (iterate-rc (row 3) (column 1) (index 6))
+==> f-188   (iterate-rc (row 3) (column 1) (index 7))
+FIRE   75 position-expanded: f-26,f-40,f-27,f-188,*
+==> f-189   (unsolved (row 3) (column 1))
+<== f-40    (possible (row 3) (column 1) (value any) (group 3) (diagonal 0) (id 13))
+<== f-188   (iterate-rc (row 3) (column 1) (index 7))
+FIRE   76 expand-any-start: f-26,f-42,*
+==> f-190   (iterate-rc (row 3) (column 3) (index 1))
+FIRE   77 expand-any: f-26,f-42,*,f-27,f-190,f-20,*
+==> f-191   (possible (row 3) (column 3) (value 1) (group 3) (diagonal 1) (id 15))
+<== f-190   (iterate-rc (row 3) (column 3) (index 1))
+==> f-192   (iterate-rc (row 3) (column 3) (index 2))
+FIRE   78 expand-any: f-26,f-42,*,f-27,f-192,f-21,*
+==> f-193   (possible (row 3) (column 3) (value 2) (group 3) (diagonal 1) (id 15))
+<== f-192   (iterate-rc (row 3) (column 3) (index 2))
+==> f-194   (iterate-rc (row 3) (column 3) (index 3))
+FIRE   79 expand-any: f-26,f-42,*,f-27,f-194,f-22,*
+==> f-195   (possible (row 3) (column 3) (value 3) (group 3) (diagonal 1) (id 15))
+<== f-194   (iterate-rc (row 3) (column 3) (index 3))
+==> f-196   (iterate-rc (row 3) (column 3) (index 4))
+FIRE   80 expand-any: f-26,f-42,*,f-27,f-196,f-23,*
+==> f-197   (possible (row 3) (column 3) (value 4) (group 3) (diagonal 1) (id 15))
+<== f-196   (iterate-rc (row 3) (column 3) (index 4))
+==> f-198   (iterate-rc (row 3) (column 3) (index 5))
+FIRE   81 expand-any: f-26,f-42,*,f-27,f-198,f-24,*
+==> f-199   (possible (row 3) (column 3) (value 5) (group 3) (diagonal 1) (id 15))
+<== f-198   (iterate-rc (row 3) (column 3) (index 5))
+==> f-200   (iterate-rc (row 3) (column 3) (index 6))
+FIRE   82 expand-any: f-26,f-42,*,f-27,f-200,f-25,*
+==> f-201   (possible (row 3) (column 3) (value 6) (group 3) (diagonal 1) (id 15))
+<== f-200   (iterate-rc (row 3) (column 3) (index 6))
+==> f-202   (iterate-rc (row 3) (column 3) (index 7))
+FIRE   83 position-expanded: f-26,f-42,f-27,f-202,*
+==> f-203   (unsolved (row 3) (column 3))
+<== f-42    (possible (row 3) (column 3) (value any) (group 3) (diagonal 1) (id 15))
+<== f-202   (iterate-rc (row 3) (column 3) (index 7))
+FIRE   84 expand-any-start: f-26,f-44,*
+==> f-204   (iterate-rc (row 4) (column 2) (index 1))
+FIRE   85 expand-any: f-26,f-44,*,f-27,f-204,f-20,*
+==> f-205   (possible (row 4) (column 2) (value 1) (group 3) (diagonal 0) (id 17))
+<== f-204   (iterate-rc (row 4) (column 2) (index 1))
+==> f-206   (iterate-rc (row 4) (column 2) (index 2))
+FIRE   86 expand-any: f-26,f-44,*,f-27,f-206,f-21,*
+==> f-207   (possible (row 4) (column 2) (value 2) (group 3) (diagonal 0) (id 17))
+<== f-206   (iterate-rc (row 4) (column 2) (index 2))
+==> f-208   (iterate-rc (row 4) (column 2) (index 3))
+FIRE   87 expand-any: f-26,f-44,*,f-27,f-208,f-22,*
+==> f-209   (possible (row 4) (column 2) (value 3) (group 3) (diagonal 0) (id 17))
+<== f-208   (iterate-rc (row 4) (column 2) (index 3))
+==> f-210   (iterate-rc (row 4) (column 2) (index 4))
+FIRE   88 expand-any: f-26,f-44,*,f-27,f-210,f-23,*
+==> f-211   (possible (row 4) (column 2) (value 4) (group 3) (diagonal 0) (id 17))
+<== f-210   (iterate-rc (row 4) (column 2) (index 4))
+==> f-212   (iterate-rc (row 4) (column 2) (index 5))
+FIRE   89 expand-any: f-26,f-44,*,f-27,f-212,f-24,*
+==> f-213   (possible (row 4) (column 2) (value 5) (group 3) (diagonal 0) (id 17))
+<== f-212   (iterate-rc (row 4) (column 2) (index 5))
+==> f-214   (iterate-rc (row 4) (column 2) (index 6))
+FIRE   90 expand-any: f-26,f-44,*,f-27,f-214,f-25,*
+==> f-215   (possible (row 4) (column 2) (value 6) (group 3) (diagonal 0) (id 17))
+<== f-214   (iterate-rc (row 4) (column 2) (index 6))
+==> f-216   (iterate-rc (row 4) (column 2) (index 7))
+FIRE   91 position-expanded: f-26,f-44,f-27,f-216,*
+==> f-217   (unsolved (row 4) (column 2))
+<== f-44    (possible (row 4) (column 2) (value any) (group 3) (diagonal 0) (id 17))
+<== f-216   (iterate-rc (row 4) (column 2) (index 7))
+FIRE   92 expand-any-start: f-26,f-45,*
+==> f-218   (iterate-rc (row 4) (column 3) (index 1))
+FIRE   93 expand-any: f-26,f-45,*,f-27,f-218,f-20,*
+==> f-219   (possible (row 4) (column 3) (value 1) (group 3) (diagonal 2) (id 18))
+<== f-218   (iterate-rc (row 4) (column 3) (index 1))
+==> f-220   (iterate-rc (row 4) (column 3) (index 2))
+FIRE   94 expand-any: f-26,f-45,*,f-27,f-220,f-21,*
+==> f-221   (possible (row 4) (column 3) (value 2) (group 3) (diagonal 2) (id 18))
+<== f-220   (iterate-rc (row 4) (column 3) (index 2))
+==> f-222   (iterate-rc (row 4) (column 3) (index 3))
+FIRE   95 expand-any: f-26,f-45,*,f-27,f-222,f-22,*
+==> f-223   (possible (row 4) (column 3) (value 3) (group 3) (diagonal 2) (id 18))
+<== f-222   (iterate-rc (row 4) (column 3) (index 3))
+==> f-224   (iterate-rc (row 4) (column 3) (index 4))
+FIRE   96 expand-any: f-26,f-45,*,f-27,f-224,f-23,*
+==> f-225   (possible (row 4) (column 3) (value 4) (group 3) (diagonal 2) (id 18))
+<== f-224   (iterate-rc (row 4) (column 3) (index 4))
+==> f-226   (iterate-rc (row 4) (column 3) (index 5))
+FIRE   97 expand-any: f-26,f-45,*,f-27,f-226,f-24,*
+==> f-227   (possible (row 4) (column 3) (value 5) (group 3) (diagonal 2) (id 18))
+<== f-226   (iterate-rc (row 4) (column 3) (index 5))
+==> f-228   (iterate-rc (row 4) (column 3) (index 6))
+FIRE   98 expand-any: f-26,f-45,*,f-27,f-228,f-25,*
+==> f-229   (possible (row 4) (column 3) (value 6) (group 3) (diagonal 2) (id 18))
+<== f-228   (iterate-rc (row 4) (column 3) (index 6))
+==> f-230   (iterate-rc (row 4) (column 3) (index 7))
+FIRE   99 position-expanded: f-26,f-45,f-27,f-230,*
+==> f-231   (unsolved (row 4) (column 3))
+<== f-45    (possible (row 4) (column 3) (value any) (group 3) (diagonal 2) (id 18))
+<== f-230   (iterate-rc (row 4) (column 3) (index 7))
+FIRE  100 expand-any-start: f-26,f-47,*
+==> f-232   (iterate-rc (row 3) (column 5) (index 1))
+FIRE  101 expand-any: f-26,f-47,*,f-27,f-232,f-20,*
+==> f-233   (possible (row 3) (column 5) (value 1) (group 4) (diagonal 0) (id 20))
+<== f-232   (iterate-rc (row 3) (column 5) (index 1))
+==> f-234   (iterate-rc (row 3) (column 5) (index 2))
+FIRE  102 expand-any: f-26,f-47,*,f-27,f-234,f-21,*
+==> f-235   (possible (row 3) (column 5) (value 2) (group 4) (diagonal 0) (id 20))
+<== f-234   (iterate-rc (row 3) (column 5) (index 2))
+==> f-236   (iterate-rc (row 3) (column 5) (index 3))
+FIRE  103 expand-any: f-26,f-47,*,f-27,f-236,f-22,*
+==> f-237   (possible (row 3) (column 5) (value 3) (group 4) (diagonal 0) (id 20))
+<== f-236   (iterate-rc (row 3) (column 5) (index 3))
+==> f-238   (iterate-rc (row 3) (column 5) (index 4))
+FIRE  104 expand-any: f-26,f-47,*,f-27,f-238,f-23,*
+==> f-239   (possible (row 3) (column 5) (value 4) (group 4) (diagonal 0) (id 20))
+<== f-238   (iterate-rc (row 3) (column 5) (index 4))
+==> f-240   (iterate-rc (row 3) (column 5) (index 5))
+FIRE  105 expand-any: f-26,f-47,*,f-27,f-240,f-24,*
+==> f-241   (possible (row 3) (column 5) (value 5) (group 4) (diagonal 0) (id 20))
+<== f-240   (iterate-rc (row 3) (column 5) (index 5))
+==> f-242   (iterate-rc (row 3) (column 5) (index 6))
+FIRE  106 expand-any: f-26,f-47,*,f-27,f-242,f-25,*
+==> f-243   (possible (row 3) (column 5) (value 6) (group 4) (diagonal 0) (id 20))
+<== f-242   (iterate-rc (row 3) (column 5) (index 6))
+==> f-244   (iterate-rc (row 3) (column 5) (index 7))
+FIRE  107 position-expanded: f-26,f-47,f-27,f-244,*
+==> f-245   (unsolved (row 3) (column 5))
+<== f-47    (possible (row 3) (column 5) (value any) (group 4) (diagonal 0) (id 20))
+<== f-244   (iterate-rc (row 3) (column 5) (index 7))
+FIRE  108 expand-any-start: f-26,f-49,*
+==> f-246   (iterate-rc (row 4) (column 4) (index 1))
+FIRE  109 expand-any: f-26,f-49,*,f-27,f-246,f-20,*
+==> f-247   (possible (row 4) (column 4) (value 1) (group 4) (diagonal 1) (id 22))
+<== f-246   (iterate-rc (row 4) (column 4) (index 1))
+==> f-248   (iterate-rc (row 4) (column 4) (index 2))
+FIRE  110 expand-any: f-26,f-49,*,f-27,f-248,f-21,*
+==> f-249   (possible (row 4) (column 4) (value 2) (group 4) (diagonal 1) (id 22))
+<== f-248   (iterate-rc (row 4) (column 4) (index 2))
+==> f-250   (iterate-rc (row 4) (column 4) (index 3))
+FIRE  111 expand-any: f-26,f-49,*,f-27,f-250,f-22,*
+==> f-251   (possible (row 4) (column 4) (value 3) (group 4) (diagonal 1) (id 22))
+<== f-250   (iterate-rc (row 4) (column 4) (index 3))
+==> f-252   (iterate-rc (row 4) (column 4) (index 4))
+FIRE  112 expand-any: f-26,f-49,*,f-27,f-252,f-23,*
+==> f-253   (possible (row 4) (column 4) (value 4) (group 4) (diagonal 1) (id 22))
+<== f-252   (iterate-rc (row 4) (column 4) (index 4))
+==> f-254   (iterate-rc (row 4) (column 4) (index 5))
+FIRE  113 expand-any: f-26,f-49,*,f-27,f-254,f-24,*
+==> f-255   (possible (row 4) (column 4) (value 5) (group 4) (diagonal 1) (id 22))
+<== f-254   (iterate-rc (row 4) (column 4) (index 5))
+==> f-256   (iterate-rc (row 4) (column 4) (index 6))
+FIRE  114 expand-any: f-26,f-49,*,f-27,f-256,f-25,*
+==> f-257   (possible (row 4) (column 4) (value 6) (group 4) (diagonal 1) (id 22))
+<== f-256   (iterate-rc (row 4) (column 4) (index 6))
+==> f-258   (iterate-rc (row 4) (column 4) (index 7))
+FIRE  115 position-expanded: f-26,f-49,f-27,f-258,*
+==> f-259   (unsolved (row 4) (column 4))
+<== f-49    (possible (row 4) (column 4) (value any) (group 4) (diagonal 1) (id 22))
+<== f-258   (iterate-rc (row 4) (column 4) (index 7))
+FIRE  116 expand-any-start: f-26,f-50,*
+==> f-260   (iterate-rc (row 4) (column 5) (index 1))
+FIRE  117 expand-any: f-26,f-50,*,f-27,f-260,f-20,*
+==> f-261   (possible (row 4) (column 5) (value 1) (group 4) (diagonal 0) (id 23))
+<== f-260   (iterate-rc (row 4) (column 5) (index 1))
+==> f-262   (iterate-rc (row 4) (column 5) (index 2))
+FIRE  118 expand-any: f-26,f-50,*,f-27,f-262,f-21,*
+==> f-263   (possible (row 4) (column 5) (value 2) (group 4) (diagonal 0) (id 23))
+<== f-262   (iterate-rc (row 4) (column 5) (index 2))
+==> f-264   (iterate-rc (row 4) (column 5) (index 3))
+FIRE  119 expand-any: f-26,f-50,*,f-27,f-264,f-22,*
+==> f-265   (possible (row 4) (column 5) (value 3) (group 4) (diagonal 0) (id 23))
+<== f-264   (iterate-rc (row 4) (column 5) (index 3))
+==> f-266   (iterate-rc (row 4) (column 5) (index 4))
+FIRE  120 expand-any: f-26,f-50,*,f-27,f-266,f-23,*
+==> f-267   (possible (row 4) (column 5) (value 4) (group 4) (diagonal 0) (id 23))
+<== f-266   (iterate-rc (row 4) (column 5) (index 4))
+==> f-268   (iterate-rc (row 4) (column 5) (index 5))
+FIRE  121 expand-any: f-26,f-50,*,f-27,f-268,f-24,*
+==> f-269   (possible (row 4) (column 5) (value 5) (group 4) (diagonal 0) (id 23))
+<== f-268   (iterate-rc (row 4) (column 5) (index 5))
+==> f-270   (iterate-rc (row 4) (column 5) (index 6))
+FIRE  122 expand-any: f-26,f-50,*,f-27,f-270,f-25,*
+==> f-271   (possible (row 4) (column 5) (value 6) (group 4) (diagonal 0) (id 23))
+<== f-270   (iterate-rc (row 4) (column 5) (index 6))
+==> f-272   (iterate-rc (row 4) (column 5) (index 7))
+FIRE  123 position-expanded: f-26,f-50,f-27,f-272,*
+==> f-273   (unsolved (row 4) (column 5))
+<== f-50    (possible (row 4) (column 5) (value any) (group 4) (diagonal 0) (id 23))
+<== f-272   (iterate-rc (row 4) (column 5) (index 7))
+FIRE  124 expand-any-start: f-26,f-51,*
+==> f-274   (iterate-rc (row 4) (column 6) (index 1))
+FIRE  125 expand-any: f-26,f-51,*,f-27,f-274,f-20,*
+==> f-275   (possible (row 4) (column 6) (value 1) (group 4) (diagonal 0) (id 24))
+<== f-274   (iterate-rc (row 4) (column 6) (index 1))
+==> f-276   (iterate-rc (row 4) (column 6) (index 2))
+FIRE  126 expand-any: f-26,f-51,*,f-27,f-276,f-21,*
+==> f-277   (possible (row 4) (column 6) (value 2) (group 4) (diagonal 0) (id 24))
+<== f-276   (iterate-rc (row 4) (column 6) (index 2))
+==> f-278   (iterate-rc (row 4) (column 6) (index 3))
+FIRE  127 expand-any: f-26,f-51,*,f-27,f-278,f-22,*
+==> f-279   (possible (row 4) (column 6) (value 3) (group 4) (diagonal 0) (id 24))
+<== f-278   (iterate-rc (row 4) (column 6) (index 3))
+==> f-280   (iterate-rc (row 4) (column 6) (index 4))
+FIRE  128 expand-any: f-26,f-51,*,f-27,f-280,f-23,*
+==> f-281   (possible (row 4) (column 6) (value 4) (group 4) (diagonal 0) (id 24))
+<== f-280   (iterate-rc (row 4) (column 6) (index 4))
+==> f-282   (iterate-rc (row 4) (column 6) (index 5))
+FIRE  129 expand-any: f-26,f-51,*,f-27,f-282,f-24,*
+==> f-283   (possible (row 4) (column 6) (value 5) (group 4) (diagonal 0) (id 24))
+<== f-282   (iterate-rc (row 4) (column 6) (index 5))
+==> f-284   (iterate-rc (row 4) (column 6) (index 6))
+FIRE  130 expand-any: f-26,f-51,*,f-27,f-284,f-25,*
+==> f-285   (possible (row 4) (column 6) (value 6) (group 4) (diagonal 0) (id 24))
+<== f-284   (iterate-rc (row 4) (column 6) (index 6))
+==> f-286   (iterate-rc (row 4) (column 6) (index 7))
+FIRE  131 position-expanded: f-26,f-51,f-27,f-286,*
+==> f-287   (unsolved (row 4) (column 6))
+<== f-51    (possible (row 4) (column 6) (value any) (group 4) (diagonal 0) (id 24))
+<== f-286   (iterate-rc (row 4) (column 6) (index 7))
+FIRE  132 expand-any-start: f-26,f-53,*
+==> f-288   (iterate-rc (row 5) (column 2) (index 1))
+FIRE  133 expand-any: f-26,f-53,*,f-27,f-288,f-20,*
+==> f-289   (possible (row 5) (column 2) (value 1) (group 5) (diagonal 2) (id 26))
+<== f-288   (iterate-rc (row 5) (column 2) (index 1))
+==> f-290   (iterate-rc (row 5) (column 2) (index 2))
+FIRE  134 expand-any: f-26,f-53,*,f-27,f-290,f-21,*
+==> f-291   (possible (row 5) (column 2) (value 2) (group 5) (diagonal 2) (id 26))
+<== f-290   (iterate-rc (row 5) (column 2) (index 2))
+==> f-292   (iterate-rc (row 5) (column 2) (index 3))
+FIRE  135 expand-any: f-26,f-53,*,f-27,f-292,f-22,*
+==> f-293   (possible (row 5) (column 2) (value 3) (group 5) (diagonal 2) (id 26))
+<== f-292   (iterate-rc (row 5) (column 2) (index 3))
+==> f-294   (iterate-rc (row 5) (column 2) (index 4))
+FIRE  136 expand-any: f-26,f-53,*,f-27,f-294,f-23,*
+==> f-295   (possible (row 5) (column 2) (value 4) (group 5) (diagonal 2) (id 26))
+<== f-294   (iterate-rc (row 5) (column 2) (index 4))
+==> f-296   (iterate-rc (row 5) (column 2) (index 5))
+FIRE  137 expand-any: f-26,f-53,*,f-27,f-296,f-24,*
+==> f-297   (possible (row 5) (column 2) (value 5) (group 5) (diagonal 2) (id 26))
+<== f-296   (iterate-rc (row 5) (column 2) (index 5))
+==> f-298   (iterate-rc (row 5) (column 2) (index 6))
+FIRE  138 expand-any: f-26,f-53,*,f-27,f-298,f-25,*
+==> f-299   (possible (row 5) (column 2) (value 6) (group 5) (diagonal 2) (id 26))
+<== f-298   (iterate-rc (row 5) (column 2) (index 6))
+==> f-300   (iterate-rc (row 5) (column 2) (index 7))
+FIRE  139 position-expanded: f-26,f-53,f-27,f-300,*
+==> f-301   (unsolved (row 5) (column 2))
+<== f-53    (possible (row 5) (column 2) (value any) (group 5) (diagonal 2) (id 26))
+<== f-300   (iterate-rc (row 5) (column 2) (index 7))
+FIRE  140 expand-any-start: f-26,f-54,*
+==> f-302   (iterate-rc (row 5) (column 3) (index 1))
+FIRE  141 expand-any: f-26,f-54,*,f-27,f-302,f-20,*
+==> f-303   (possible (row 5) (column 3) (value 1) (group 5) (diagonal 0) (id 27))
+<== f-302   (iterate-rc (row 5) (column 3) (index 1))
+==> f-304   (iterate-rc (row 5) (column 3) (index 2))
+FIRE  142 expand-any: f-26,f-54,*,f-27,f-304,f-21,*
+==> f-305   (possible (row 5) (column 3) (value 2) (group 5) (diagonal 0) (id 27))
+<== f-304   (iterate-rc (row 5) (column 3) (index 2))
+==> f-306   (iterate-rc (row 5) (column 3) (index 3))
+FIRE  143 expand-any: f-26,f-54,*,f-27,f-306,f-22,*
+==> f-307   (possible (row 5) (column 3) (value 3) (group 5) (diagonal 0) (id 27))
+<== f-306   (iterate-rc (row 5) (column 3) (index 3))
+==> f-308   (iterate-rc (row 5) (column 3) (index 4))
+FIRE  144 expand-any: f-26,f-54,*,f-27,f-308,f-23,*
+==> f-309   (possible (row 5) (column 3) (value 4) (group 5) (diagonal 0) (id 27))
+<== f-308   (iterate-rc (row 5) (column 3) (index 4))
+==> f-310   (iterate-rc (row 5) (column 3) (index 5))
+FIRE  145 expand-any: f-26,f-54,*,f-27,f-310,f-24,*
+==> f-311   (possible (row 5) (column 3) (value 5) (group 5) (diagonal 0) (id 27))
+<== f-310   (iterate-rc (row 5) (column 3) (index 5))
+==> f-312   (iterate-rc (row 5) (column 3) (index 6))
+FIRE  146 expand-any: f-26,f-54,*,f-27,f-312,f-25,*
+==> f-313   (possible (row 5) (column 3) (value 6) (group 5) (diagonal 0) (id 27))
+<== f-312   (iterate-rc (row 5) (column 3) (index 6))
+==> f-314   (iterate-rc (row 5) (column 3) (index 7))
+FIRE  147 position-expanded: f-26,f-54,f-27,f-314,*
+==> f-315   (unsolved (row 5) (column 3))
+<== f-54    (possible (row 5) (column 3) (value any) (group 5) (diagonal 0) (id 27))
+<== f-314   (iterate-rc (row 5) (column 3) (index 7))
+FIRE  148 expand-any-start: f-26,f-55,*
+==> f-316   (iterate-rc (row 6) (column 1) (index 1))
+FIRE  149 expand-any: f-26,f-55,*,f-27,f-316,f-20,*
+==> f-317   (possible (row 6) (column 1) (value 1) (group 5) (diagonal 2) (id 28))
+<== f-316   (iterate-rc (row 6) (column 1) (index 1))
+==> f-318   (iterate-rc (row 6) (column 1) (index 2))
+FIRE  150 expand-any: f-26,f-55,*,f-27,f-318,f-21,*
+==> f-319   (possible (row 6) (column 1) (value 2) (group 5) (diagonal 2) (id 28))
+<== f-318   (iterate-rc (row 6) (column 1) (index 2))
+==> f-320   (iterate-rc (row 6) (column 1) (index 3))
+FIRE  151 expand-any: f-26,f-55,*,f-27,f-320,f-22,*
+==> f-321   (possible (row 6) (column 1) (value 3) (group 5) (diagonal 2) (id 28))
+<== f-320   (iterate-rc (row 6) (column 1) (index 3))
+==> f-322   (iterate-rc (row 6) (column 1) (index 4))
+FIRE  152 expand-any: f-26,f-55,*,f-27,f-322,f-23,*
+==> f-323   (possible (row 6) (column 1) (value 4) (group 5) (diagonal 2) (id 28))
+<== f-322   (iterate-rc (row 6) (column 1) (index 4))
+==> f-324   (iterate-rc (row 6) (column 1) (index 5))
+FIRE  153 expand-any: f-26,f-55,*,f-27,f-324,f-24,*
+==> f-325   (possible (row 6) (column 1) (value 5) (group 5) (diagonal 2) (id 28))
+<== f-324   (iterate-rc (row 6) (column 1) (index 5))
+==> f-326   (iterate-rc (row 6) (column 1) (index 6))
+FIRE  154 expand-any: f-26,f-55,*,f-27,f-326,f-25,*
+==> f-327   (possible (row 6) (column 1) (value 6) (group 5) (diagonal 2) (id 28))
+<== f-326   (iterate-rc (row 6) (column 1) (index 6))
+==> f-328   (iterate-rc (row 6) (column 1) (index 7))
+FIRE  155 position-expanded: f-26,f-55,f-27,f-328,*
+==> f-329   (unsolved (row 6) (column 1))
+<== f-55    (possible (row 6) (column 1) (value any) (group 5) (diagonal 2) (id 28))
+<== f-328   (iterate-rc (row 6) (column 1) (index 7))
+FIRE  156 expand-any-start: f-26,f-56,*
+==> f-330   (iterate-rc (row 6) (column 2) (index 1))
+FIRE  157 expand-any: f-26,f-56,*,f-27,f-330,f-20,*
+==> f-331   (possible (row 6) (column 2) (value 1) (group 5) (diagonal 0) (id 29))
+<== f-330   (iterate-rc (row 6) (column 2) (index 1))
+==> f-332   (iterate-rc (row 6) (column 2) (index 2))
+FIRE  158 expand-any: f-26,f-56,*,f-27,f-332,f-21,*
+==> f-333   (possible (row 6) (column 2) (value 2) (group 5) (diagonal 0) (id 29))
+<== f-332   (iterate-rc (row 6) (column 2) (index 2))
+==> f-334   (iterate-rc (row 6) (column 2) (index 3))
+FIRE  159 expand-any: f-26,f-56,*,f-27,f-334,f-22,*
+==> f-335   (possible (row 6) (column 2) (value 3) (group 5) (diagonal 0) (id 29))
+<== f-334   (iterate-rc (row 6) (column 2) (index 3))
+==> f-336   (iterate-rc (row 6) (column 2) (index 4))
+FIRE  160 expand-any: f-26,f-56,*,f-27,f-336,f-23,*
+==> f-337   (possible (row 6) (column 2) (value 4) (group 5) (diagonal 0) (id 29))
+<== f-336   (iterate-rc (row 6) (column 2) (index 4))
+==> f-338   (iterate-rc (row 6) (column 2) (index 5))
+FIRE  161 expand-any: f-26,f-56,*,f-27,f-338,f-24,*
+==> f-339   (possible (row 6) (column 2) (value 5) (group 5) (diagonal 0) (id 29))
+<== f-338   (iterate-rc (row 6) (column 2) (index 5))
+==> f-340   (iterate-rc (row 6) (column 2) (index 6))
+FIRE  162 expand-any: f-26,f-56,*,f-27,f-340,f-25,*
+==> f-341   (possible (row 6) (column 2) (value 6) (group 5) (diagonal 0) (id 29))
+<== f-340   (iterate-rc (row 6) (column 2) (index 6))
+==> f-342   (iterate-rc (row 6) (column 2) (index 7))
+FIRE  163 position-expanded: f-26,f-56,f-27,f-342,*
+==> f-343   (unsolved (row 6) (column 2))
+<== f-56    (possible (row 6) (column 2) (value any) (group 5) (diagonal 0) (id 29))
+<== f-342   (iterate-rc (row 6) (column 2) (index 7))
+FIRE  164 expand-any-start: f-26,f-57,*
+==> f-344   (iterate-rc (row 6) (column 3) (index 1))
+FIRE  165 expand-any: f-26,f-57,*,f-27,f-344,f-20,*
+==> f-345   (possible (row 6) (column 3) (value 1) (group 5) (diagonal 0) (id 30))
+<== f-344   (iterate-rc (row 6) (column 3) (index 1))
+==> f-346   (iterate-rc (row 6) (column 3) (index 2))
+FIRE  166 expand-any: f-26,f-57,*,f-27,f-346,f-21,*
+==> f-347   (possible (row 6) (column 3) (value 2) (group 5) (diagonal 0) (id 30))
+<== f-346   (iterate-rc (row 6) (column 3) (index 2))
+==> f-348   (iterate-rc (row 6) (column 3) (index 3))
+FIRE  167 expand-any: f-26,f-57,*,f-27,f-348,f-22,*
+==> f-349   (possible (row 6) (column 3) (value 3) (group 5) (diagonal 0) (id 30))
+<== f-348   (iterate-rc (row 6) (column 3) (index 3))
+==> f-350   (iterate-rc (row 6) (column 3) (index 4))
+FIRE  168 expand-any: f-26,f-57,*,f-27,f-350,f-23,*
+==> f-351   (possible (row 6) (column 3) (value 4) (group 5) (diagonal 0) (id 30))
+<== f-350   (iterate-rc (row 6) (column 3) (index 4))
+==> f-352   (iterate-rc (row 6) (column 3) (index 5))
+FIRE  169 expand-any: f-26,f-57,*,f-27,f-352,f-24,*
+==> f-353   (possible (row 6) (column 3) (value 5) (group 5) (diagonal 0) (id 30))
+<== f-352   (iterate-rc (row 6) (column 3) (index 5))
+==> f-354   (iterate-rc (row 6) (column 3) (index 6))
+FIRE  170 expand-any: f-26,f-57,*,f-27,f-354,f-25,*
+==> f-355   (possible (row 6) (column 3) (value 6) (group 5) (diagonal 0) (id 30))
+<== f-354   (iterate-rc (row 6) (column 3) (index 6))
+==> f-356   (iterate-rc (row 6) (column 3) (index 7))
+FIRE  171 position-expanded: f-26,f-57,f-27,f-356,*
+==> f-357   (unsolved (row 6) (column 3))
+<== f-57    (possible (row 6) (column 3) (value any) (group 5) (diagonal 0) (id 30))
+<== f-356   (iterate-rc (row 6) (column 3) (index 7))
+FIRE  172 expand-any-start: f-26,f-58,*
+==> f-358   (iterate-rc (row 5) (column 4) (index 1))
+FIRE  173 expand-any: f-26,f-58,*,f-27,f-358,f-20,*
+==> f-359   (possible (row 5) (column 4) (value 1) (group 6) (diagonal 0) (id 31))
+<== f-358   (iterate-rc (row 5) (column 4) (index 1))
+==> f-360   (iterate-rc (row 5) (column 4) (index 2))
+FIRE  174 expand-any: f-26,f-58,*,f-27,f-360,f-21,*
+==> f-361   (possible (row 5) (column 4) (value 2) (group 6) (diagonal 0) (id 31))
+<== f-360   (iterate-rc (row 5) (column 4) (index 2))
+==> f-362   (iterate-rc (row 5) (column 4) (index 3))
+FIRE  175 expand-any: f-26,f-58,*,f-27,f-362,f-22,*
+==> f-363   (possible (row 5) (column 4) (value 3) (group 6) (diagonal 0) (id 31))
+<== f-362   (iterate-rc (row 5) (column 4) (index 3))
+==> f-364   (iterate-rc (row 5) (column 4) (index 4))
+FIRE  176 expand-any: f-26,f-58,*,f-27,f-364,f-23,*
+==> f-365   (possible (row 5) (column 4) (value 4) (group 6) (diagonal 0) (id 31))
+<== f-364   (iterate-rc (row 5) (column 4) (index 4))
+==> f-366   (iterate-rc (row 5) (column 4) (index 5))
+FIRE  177 expand-any: f-26,f-58,*,f-27,f-366,f-24,*
+==> f-367   (possible (row 5) (column 4) (value 5) (group 6) (diagonal 0) (id 31))
+<== f-366   (iterate-rc (row 5) (column 4) (index 5))
+==> f-368   (iterate-rc (row 5) (column 4) (index 6))
+FIRE  178 expand-any: f-26,f-58,*,f-27,f-368,f-25,*
+==> f-369   (possible (row 5) (column 4) (value 6) (group 6) (diagonal 0) (id 31))
+<== f-368   (iterate-rc (row 5) (column 4) (index 6))
+==> f-370   (iterate-rc (row 5) (column 4) (index 7))
+FIRE  179 position-expanded: f-26,f-58,f-27,f-370,*
+==> f-371   (unsolved (row 5) (column 4))
+<== f-58    (possible (row 5) (column 4) (value any) (group 6) (diagonal 0) (id 31))
+<== f-370   (iterate-rc (row 5) (column 4) (index 7))
+FIRE  180 expand-any-start: f-26,f-59,*
+==> f-372   (iterate-rc (row 5) (column 5) (index 1))
+FIRE  181 expand-any: f-26,f-59,*,f-27,f-372,f-20,*
+==> f-373   (possible (row 5) (column 5) (value 1) (group 6) (diagonal 1) (id 32))
+<== f-372   (iterate-rc (row 5) (column 5) (index 1))
+==> f-374   (iterate-rc (row 5) (column 5) (index 2))
+FIRE  182 expand-any: f-26,f-59,*,f-27,f-374,f-21,*
+==> f-375   (possible (row 5) (column 5) (value 2) (group 6) (diagonal 1) (id 32))
+<== f-374   (iterate-rc (row 5) (column 5) (index 2))
+==> f-376   (iterate-rc (row 5) (column 5) (index 3))
+FIRE  183 expand-any: f-26,f-59,*,f-27,f-376,f-22,*
+==> f-377   (possible (row 5) (column 5) (value 3) (group 6) (diagonal 1) (id 32))
+<== f-376   (iterate-rc (row 5) (column 5) (index 3))
+==> f-378   (iterate-rc (row 5) (column 5) (index 4))
+FIRE  184 expand-any: f-26,f-59,*,f-27,f-378,f-23,*
+==> f-379   (possible (row 5) (column 5) (value 4) (group 6) (diagonal 1) (id 32))
+<== f-378   (iterate-rc (row 5) (column 5) (index 4))
+==> f-380   (iterate-rc (row 5) (column 5) (index 5))
+FIRE  185 expand-any: f-26,f-59,*,f-27,f-380,f-24,*
+==> f-381   (possible (row 5) (column 5) (value 5) (group 6) (diagonal 1) (id 32))
+<== f-380   (iterate-rc (row 5) (column 5) (index 5))
+==> f-382   (iterate-rc (row 5) (column 5) (index 6))
+FIRE  186 expand-any: f-26,f-59,*,f-27,f-382,f-25,*
+==> f-383   (possible (row 5) (column 5) (value 6) (group 6) (diagonal 1) (id 32))
+<== f-382   (iterate-rc (row 5) (column 5) (index 6))
+==> f-384   (iterate-rc (row 5) (column 5) (index 7))
+FIRE  187 position-expanded: f-26,f-59,f-27,f-384,*
+==> f-385   (unsolved (row 5) (column 5))
+<== f-59    (possible (row 5) (column 5) (value any) (group 6) (diagonal 1) (id 32))
+<== f-384   (iterate-rc (row 5) (column 5) (index 7))
+FIRE  188 expand-any-start: f-26,f-60,*
+==> f-386   (iterate-rc (row 5) (column 6) (index 1))
+FIRE  189 expand-any: f-26,f-60,*,f-27,f-386,f-20,*
+==> f-387   (possible (row 5) (column 6) (value 1) (group 6) (diagonal 0) (id 33))
+<== f-386   (iterate-rc (row 5) (column 6) (index 1))
+==> f-388   (iterate-rc (row 5) (column 6) (index 2))
+FIRE  190 expand-any: f-26,f-60,*,f-27,f-388,f-21,*
+==> f-389   (possible (row 5) (column 6) (value 2) (group 6) (diagonal 0) (id 33))
+<== f-388   (iterate-rc (row 5) (column 6) (index 2))
+==> f-390   (iterate-rc (row 5) (column 6) (index 3))
+FIRE  191 expand-any: f-26,f-60,*,f-27,f-390,f-22,*
+==> f-391   (possible (row 5) (column 6) (value 3) (group 6) (diagonal 0) (id 33))
+<== f-390   (iterate-rc (row 5) (column 6) (index 3))
+==> f-392   (iterate-rc (row 5) (column 6) (index 4))
+FIRE  192 expand-any: f-26,f-60,*,f-27,f-392,f-23,*
+==> f-393   (possible (row 5) (column 6) (value 4) (group 6) (diagonal 0) (id 33))
+<== f-392   (iterate-rc (row 5) (column 6) (index 4))
+==> f-394   (iterate-rc (row 5) (column 6) (index 5))
+FIRE  193 expand-any: f-26,f-60,*,f-27,f-394,f-24,*
+==> f-395   (possible (row 5) (column 6) (value 5) (group 6) (diagonal 0) (id 33))
+<== f-394   (iterate-rc (row 5) (column 6) (index 5))
+==> f-396   (iterate-rc (row 5) (column 6) (index 6))
+FIRE  194 expand-any: f-26,f-60,*,f-27,f-396,f-25,*
+==> f-397   (possible (row 5) (column 6) (value 6) (group 6) (diagonal 0) (id 33))
+<== f-396   (iterate-rc (row 5) (column 6) (index 6))
+==> f-398   (iterate-rc (row 5) (column 6) (index 7))
+FIRE  195 position-expanded: f-26,f-60,f-27,f-398,*
+==> f-399   (unsolved (row 5) (column 6))
+<== f-60    (possible (row 5) (column 6) (value any) (group 6) (diagonal 0) (id 33))
+<== f-398   (iterate-rc (row 5) (column 6) (index 7))
+FIRE  196 expand-any-start: f-26,f-61,*
+==> f-400   (iterate-rc (row 6) (column 4) (index 1))
+FIRE  197 expand-any: f-26,f-61,*,f-27,f-400,f-20,*
+==> f-401   (possible (row 6) (column 4) (value 1) (group 6) (diagonal 0) (id 34))
+<== f-400   (iterate-rc (row 6) (column 4) (index 1))
+==> f-402   (iterate-rc (row 6) (column 4) (index 2))
+FIRE  198 expand-any: f-26,f-61,*,f-27,f-402,f-21,*
+==> f-403   (possible (row 6) (column 4) (value 2) (group 6) (diagonal 0) (id 34))
+<== f-402   (iterate-rc (row 6) (column 4) (index 2))
+==> f-404   (iterate-rc (row 6) (column 4) (index 3))
+FIRE  199 expand-any: f-26,f-61,*,f-27,f-404,f-22,*
+==> f-405   (possible (row 6) (column 4) (value 3) (group 6) (diagonal 0) (id 34))
+<== f-404   (iterate-rc (row 6) (column 4) (index 3))
+==> f-406   (iterate-rc (row 6) (column 4) (index 4))
+FIRE  200 expand-any: f-26,f-61,*,f-27,f-406,f-23,*
+==> f-407   (possible (row 6) (column 4) (value 4) (group 6) (diagonal 0) (id 34))
+<== f-406   (iterate-rc (row 6) (column 4) (index 4))
+==> f-408   (iterate-rc (row 6) (column 4) (index 5))
+FIRE  201 expand-any: f-26,f-61,*,f-27,f-408,f-24,*
+==> f-409   (possible (row 6) (column 4) (value 5) (group 6) (diagonal 0) (id 34))
+<== f-408   (iterate-rc (row 6) (column 4) (index 5))
+==> f-410   (iterate-rc (row 6) (column 4) (index 6))
+FIRE  202 expand-any: f-26,f-61,*,f-27,f-410,f-25,*
+==> f-411   (possible (row 6) (column 4) (value 6) (group 6) (diagonal 0) (id 34))
+<== f-410   (iterate-rc (row 6) (column 4) (index 6))
+==> f-412   (iterate-rc (row 6) (column 4) (index 7))
+FIRE  203 position-expanded: f-26,f-61,f-27,f-412,*
+==> f-413   (unsolved (row 6) (column 4))
+<== f-61    (possible (row 6) (column 4) (value any) (group 6) (diagonal 0) (id 34))
+<== f-412   (iterate-rc (row 6) (column 4) (index 7))
+FIRE  204 expand-any-start: f-26,f-63,*
+==> f-414   (iterate-rc (row 6) (column 6) (index 1))
+FIRE  205 expand-any: f-26,f-63,*,f-27,f-414,f-20,*
+==> f-415   (possible (row 6) (column 6) (value 1) (group 6) (diagonal 1) (id 36))
+<== f-414   (iterate-rc (row 6) (column 6) (index 1))
+==> f-416   (iterate-rc (row 6) (column 6) (index 2))
+FIRE  206 expand-any: f-26,f-63,*,f-27,f-416,f-21,*
+==> f-417   (possible (row 6) (column 6) (value 2) (group 6) (diagonal 1) (id 36))
+<== f-416   (iterate-rc (row 6) (column 6) (index 2))
+==> f-418   (iterate-rc (row 6) (column 6) (index 3))
+FIRE  207 expand-any: f-26,f-63,*,f-27,f-418,f-22,*
+==> f-419   (possible (row 6) (column 6) (value 3) (group 6) (diagonal 1) (id 36))
+<== f-418   (iterate-rc (row 6) (column 6) (index 3))
+==> f-420   (iterate-rc (row 6) (column 6) (index 4))
+FIRE  208 expand-any: f-26,f-63,*,f-27,f-420,f-23,*
+==> f-421   (possible (row 6) (column 6) (value 4) (group 6) (diagonal 1) (id 36))
+<== f-420   (iterate-rc (row 6) (column 6) (index 4))
+==> f-422   (iterate-rc (row 6) (column 6) (index 5))
+FIRE  209 expand-any: f-26,f-63,*,f-27,f-422,f-24,*
+==> f-423   (possible (row 6) (column 6) (value 5) (group 6) (diagonal 1) (id 36))
+<== f-422   (iterate-rc (row 6) (column 6) (index 5))
+==> f-424   (iterate-rc (row 6) (column 6) (index 6))
+FIRE  210 expand-any: f-26,f-63,*,f-27,f-424,f-25,*
+==> f-425   (possible (row 6) (column 6) (value 6) (group 6) (diagonal 1) (id 36))
+<== f-424   (iterate-rc (row 6) (column 6) (index 6))
+==> f-426   (iterate-rc (row 6) (column 6) (index 7))
+FIRE  211 position-expanded: f-26,f-63,f-27,f-426,*
+==> f-427   (unsolved (row 6) (column 6))
+<== f-63    (possible (row 6) (column 6) (value any) (group 6) (diagonal 1) (id 36))
+<== f-426   (iterate-rc (row 6) (column 6) (index 7))
+FIRE  212 expand-any-done: f-26,*
+<== f-26    (phase expand-any)
+==> f-428   (phase initial-output)
+==> f-429   (print-position 1 1)
+FIRE  213 print-initial: f-428
+
+The puzzle is: 
+
+   FIRE  214 print-position-value-not-found: f-428,f-429,*,f-27
+==> f-430   (position-printed 1 1)
+*FIRE  215 next-position-column: f-428,f-27,f-429,f-430
+ <== f-429   (print-position 1 1)
+<== f-430   (position-printed 1 1)
+==> f-431   (print-position 1 2)
+FIRE  216 print-position-value-not-found: f-428,f-431,*,f-27
+==> f-432   (position-printed 1 2)
+*FIRE  217 next-position-column: f-428,f-27,f-431,f-432
+ <== f-431   (print-position 1 2)
+<== f-432   (position-printed 1 2)
+==> f-433   (print-position 1 3)
+FIRE  218 print-position-value-found: f-428,f-433,f-30,*,f-27
+==> f-434   (position-printed 1 3)
+1FIRE  219 next-position-column: f-428,f-27,f-433,f-434
+  <== f-433   (print-position 1 3)
+<== f-434   (position-printed 1 3)
+==> f-435   (print-position 1 4)
+FIRE  220 print-position-value-not-found: f-428,f-435,*,f-27
+==> f-436   (position-printed 1 4)
+*FIRE  221 next-position-column: f-428,f-27,f-435,f-436
+ <== f-435   (print-position 1 4)
+<== f-436   (position-printed 1 4)
+==> f-437   (print-position 1 5)
+FIRE  222 print-position-value-not-found: f-428,f-437,*,f-27
+==> f-438   (position-printed 1 5)
+*FIRE  223 next-position-column: f-428,f-27,f-437,f-438
+ <== f-437   (print-position 1 5)
+<== f-438   (position-printed 1 5)
+==> f-439   (print-position 1 6)
+FIRE  224 print-position-value-not-found: f-428,f-439,*,f-27
+==> f-440   (position-printed 1 6)
+*FIRE  225 next-position-row: f-428,f-27,f-439,f-440
+
+   <== f-439   (print-position 1 6)
+<== f-440   (position-printed 1 6)
+==> f-441   (print-position 2 1)
+FIRE  226 print-position-value-not-found: f-428,f-441,*,f-27
+==> f-442   (position-printed 2 1)
+*FIRE  227 next-position-column: f-428,f-27,f-441,f-442
+ <== f-441   (print-position 2 1)
+<== f-442   (position-printed 2 1)
+==> f-443   (print-position 2 2)
+FIRE  228 print-position-value-not-found: f-428,f-443,*,f-27
+==> f-444   (position-printed 2 2)
+*FIRE  229 next-position-column: f-428,f-27,f-443,f-444
+ <== f-443   (print-position 2 2)
+<== f-444   (position-printed 2 2)
+==> f-445   (print-position 2 3)
+FIRE  230 print-position-value-not-found: f-428,f-445,*,f-27
+==> f-446   (position-printed 2 3)
+*FIRE  231 next-position-column: f-428,f-27,f-445,f-446
+  <== f-445   (print-position 2 3)
+<== f-446   (position-printed 2 3)
+==> f-447   (print-position 2 4)
+FIRE  232 print-position-value-found: f-428,f-447,f-37,*,f-27
+==> f-448   (position-printed 2 4)
+1FIRE  233 next-position-column: f-428,f-27,f-447,f-448
+ <== f-447   (print-position 2 4)
+<== f-448   (position-printed 2 4)
+==> f-449   (print-position 2 5)
+FIRE  234 print-position-value-found: f-428,f-449,f-38,*,f-27
+==> f-450   (position-printed 2 5)
+3FIRE  235 next-position-column: f-428,f-27,f-449,f-450
+ <== f-449   (print-position 2 5)
+<== f-450   (position-printed 2 5)
+==> f-451   (print-position 2 6)
+FIRE  236 print-position-value-found: f-428,f-451,f-39,*,f-27
+==> f-452   (position-printed 2 6)
+5FIRE  237 next-position-row: f-428,f-27,f-451,f-452
+
+   <== f-451   (print-position 2 6)
+<== f-452   (position-printed 2 6)
+==> f-453   (print-position 3 1)
+FIRE  238 print-position-value-not-found: f-428,f-453,*,f-27
+==> f-454   (position-printed 3 1)
+*FIRE  239 next-position-column: f-428,f-27,f-453,f-454
+ <== f-453   (print-position 3 1)
+<== f-454   (position-printed 3 1)
+==> f-455   (print-position 3 2)
+FIRE  240 print-position-value-found: f-428,f-455,f-41,*,f-27
+==> f-456   (position-printed 3 2)
+6FIRE  241 next-position-column: f-428,f-27,f-455,f-456
+ <== f-455   (print-position 3 2)
+<== f-456   (position-printed 3 2)
+==> f-457   (print-position 3 3)
+FIRE  242 print-position-value-not-found: f-428,f-457,*,f-27
+==> f-458   (position-printed 3 3)
+*FIRE  243 next-position-column: f-428,f-27,f-457,f-458
+  <== f-457   (print-position 3 3)
+<== f-458   (position-printed 3 3)
+==> f-459   (print-position 3 4)
+FIRE  244 print-position-value-found: f-428,f-459,f-46,*,f-27
+==> f-460   (position-printed 3 4)
+4FIRE  245 next-position-column: f-428,f-27,f-459,f-460
+ <== f-459   (print-position 3 4)
+<== f-460   (position-printed 3 4)
+==> f-461   (print-position 3 5)
+FIRE  246 print-position-value-not-found: f-428,f-461,*,f-27
+==> f-462   (position-printed 3 5)
+*FIRE  247 next-position-column: f-428,f-27,f-461,f-462
+ <== f-461   (print-position 3 5)
+<== f-462   (position-printed 3 5)
+==> f-463   (print-position 3 6)
+FIRE  248 print-position-value-found: f-428,f-463,f-48,*,f-27
+==> f-464   (position-printed 3 6)
+2FIRE  249 next-position-row: f-428,f-27,f-463,f-464
+
+
+   <== f-463   (print-position 3 6)
+<== f-464   (position-printed 3 6)
+==> f-465   (print-position 4 1)
+FIRE  250 print-position-value-found: f-428,f-465,f-43,*,f-27
+==> f-466   (position-printed 4 1)
+4FIRE  251 next-position-column: f-428,f-27,f-465,f-466
+ <== f-465   (print-position 4 1)
+<== f-466   (position-printed 4 1)
+==> f-467   (print-position 4 2)
+FIRE  252 print-position-value-not-found: f-428,f-467,*,f-27
+==> f-468   (position-printed 4 2)
+*FIRE  253 next-position-column: f-428,f-27,f-467,f-468
+ <== f-467   (print-position 4 2)
+<== f-468   (position-printed 4 2)
+==> f-469   (print-position 4 3)
+FIRE  254 print-position-value-not-found: f-428,f-469,*,f-27
+==> f-470   (position-printed 4 3)
+*FIRE  255 next-position-column: f-428,f-27,f-469,f-470
+  <== f-469   (print-position 4 3)
+<== f-470   (position-printed 4 3)
+==> f-471   (print-position 4 4)
+FIRE  256 print-position-value-not-found: f-428,f-471,*,f-27
+==> f-472   (position-printed 4 4)
+*FIRE  257 next-position-column: f-428,f-27,f-471,f-472
+ <== f-471   (print-position 4 4)
+<== f-472   (position-printed 4 4)
+==> f-473   (print-position 4 5)
+FIRE  258 print-position-value-not-found: f-428,f-473,*,f-27
+==> f-474   (position-printed 4 5)
+*FIRE  259 next-position-column: f-428,f-27,f-473,f-474
+ <== f-473   (print-position 4 5)
+<== f-474   (position-printed 4 5)
+==> f-475   (print-position 4 6)
+FIRE  260 print-position-value-not-found: f-428,f-475,*,f-27
+==> f-476   (position-printed 4 6)
+*FIRE  261 next-position-row: f-428,f-27,f-475,f-476
+
+   <== f-475   (print-position 4 6)
+<== f-476   (position-printed 4 6)
+==> f-477   (print-position 5 1)
+FIRE  262 print-position-value-found: f-428,f-477,f-52,*,f-27
+==> f-478   (position-printed 5 1)
+3FIRE  263 next-position-column: f-428,f-27,f-477,f-478
+ <== f-477   (print-position 5 1)
+<== f-478   (position-printed 5 1)
+==> f-479   (print-position 5 2)
+FIRE  264 print-position-value-not-found: f-428,f-479,*,f-27
+==> f-480   (position-printed 5 2)
+*FIRE  265 next-position-column: f-428,f-27,f-479,f-480
+ <== f-479   (print-position 5 2)
+<== f-480   (position-printed 5 2)
+==> f-481   (print-position 5 3)
+FIRE  266 print-position-value-not-found: f-428,f-481,*,f-27
+==> f-482   (position-printed 5 3)
+*FIRE  267 next-position-column: f-428,f-27,f-481,f-482
+  <== f-481   (print-position 5 3)
+<== f-482   (position-printed 5 3)
+==> f-483   (print-position 5 4)
+FIRE  268 print-position-value-not-found: f-428,f-483,*,f-27
+==> f-484   (position-printed 5 4)
+*FIRE  269 next-position-column: f-428,f-27,f-483,f-484
+ <== f-483   (print-position 5 4)
+<== f-484   (position-printed 5 4)
+==> f-485   (print-position 5 5)
+FIRE  270 print-position-value-not-found: f-428,f-485,*,f-27
+==> f-486   (position-printed 5 5)
+*FIRE  271 next-position-column: f-428,f-27,f-485,f-486
+ <== f-485   (print-position 5 5)
+<== f-486   (position-printed 5 5)
+==> f-487   (print-position 5 6)
+FIRE  272 print-position-value-not-found: f-428,f-487,*,f-27
+==> f-488   (position-printed 5 6)
+*FIRE  273 next-position-row: f-428,f-27,f-487,f-488
+
+   <== f-487   (print-position 5 6)
+<== f-488   (position-printed 5 6)
+==> f-489   (print-position 6 1)
+FIRE  274 print-position-value-not-found: f-428,f-489,*,f-27
+==> f-490   (position-printed 6 1)
+*FIRE  275 next-position-column: f-428,f-27,f-489,f-490
+ <== f-489   (print-position 6 1)
+<== f-490   (position-printed 6 1)
+==> f-491   (print-position 6 2)
+FIRE  276 print-position-value-not-found: f-428,f-491,*,f-27
+==> f-492   (position-printed 6 2)
+*FIRE  277 next-position-column: f-428,f-27,f-491,f-492
+ <== f-491   (print-position 6 2)
+<== f-492   (position-printed 6 2)
+==> f-493   (print-position 6 3)
+FIRE  278 print-position-value-not-found: f-428,f-493,*,f-27
+==> f-494   (position-printed 6 3)
+*FIRE  279 next-position-column: f-428,f-27,f-493,f-494
+  <== f-493   (print-position 6 3)
+<== f-494   (position-printed 6 3)
+==> f-495   (print-position 6 4)
+FIRE  280 print-position-value-not-found: f-428,f-495,*,f-27
+==> f-496   (position-printed 6 4)
+*FIRE  281 next-position-column: f-428,f-27,f-495,f-496
+ <== f-495   (print-position 6 4)
+<== f-496   (position-printed 6 4)
+==> f-497   (print-position 6 5)
+FIRE  282 print-position-value-found: f-428,f-497,f-62,*,f-27
+==> f-498   (position-printed 6 5)
+6FIRE  283 next-position-column: f-428,f-27,f-497,f-498
+ <== f-497   (print-position 6 5)
+<== f-498   (position-printed 6 5)
+==> f-499   (print-position 6 6)
+FIRE  284 print-position-value-not-found: f-428,f-499,*,f-27
+==> f-500   (position-printed 6 6)
+*FIRE  285 initial-output-done: f-428,f-27,f-499,f-500
+
+<== f-499   (print-position 6 6)
+<== f-500   (position-printed 6 6)
+FIRE  286 begin-match: f-428
+<== f-428   (phase initial-output)
+==> f-501   (phase match)
+FIRE  287 enable-techniques: f-501,f-27,*,*
+==> f-502   (rank (value 1) (process yes))
+FIRE  288 naked-single-x: f-501,f-502,f-1,f-46,*,f-323,*
+==> f-503   (impossible (id 28) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  289 naked-single-x: f-501,f-502,f-1,f-46,*,f-295,*
+==> f-504   (impossible (id 26) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  290 naked-single-x: f-501,f-502,f-1,f-46,*,f-225,*
+==> f-505   (impossible (id 18) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  291 naked-single-x: f-501,f-502,f-1,f-46,*,f-169,*
+==> f-506   (impossible (id 9) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  292 naked-single-x: f-501,f-502,f-1,f-38,*,f-321,*
+==> f-507   (impossible (id 28) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  293 naked-single-x: f-501,f-502,f-1,f-38,*,f-293,*
+==> f-508   (impossible (id 26) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  294 naked-single-x: f-501,f-502,f-1,f-38,*,f-223,*
+==> f-509   (impossible (id 18) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  295 naked-single-x: f-501,f-502,f-1,f-38,*,f-167,*
+==> f-510   (impossible (id 9) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  296 naked-single-group: f-501,f-502,f-1,f-62,*,f-425,*
+==> f-511   (impossible (id 36) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  297 naked-single-group: f-501,f-502,f-1,f-62,*,f-411,*
+==> f-512   (impossible (id 34) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  298 naked-single-group: f-501,f-502,f-1,f-62,*,f-397,*
+==> f-513   (impossible (id 33) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  299 naked-single-group: f-501,f-502,f-1,f-62,*,f-383,*
+==> f-514   (impossible (id 32) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  300 naked-single-group: f-501,f-502,f-1,f-62,*,f-369,*
+==> f-515   (impossible (id 31) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  301 naked-single-row: f-501,f-502,f-1,f-62,*,f-355,*
+==> f-516   (impossible (id 30) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  302 naked-single-row: f-501,f-502,f-1,f-62,*,f-341,*
+==> f-517   (impossible (id 29) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  303 naked-single-row: f-501,f-502,f-1,f-62,*,f-327,*
+==> f-518   (impossible (id 28) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  304 naked-single-column: f-501,f-502,f-1,f-62,*,f-271,*
+==> f-519   (impossible (id 23) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  305 naked-single-column: f-501,f-502,f-1,f-62,*,f-243,*
+==> f-520   (impossible (id 20) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  306 naked-single-column: f-501,f-502,f-1,f-62,*,f-159,*
+==> f-521   (impossible (id 8) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  307 naked-single-group: f-501,f-502,f-1,f-52,*,f-349,*
+==> f-522   (impossible (id 30) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  308 naked-single-group: f-501,f-502,f-1,f-52,*,f-335,*
+==> f-523   (impossible (id 29) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  309 naked-single-group: f-501,f-502,f-1,f-52,*,f-307,*
+==> f-524   (impossible (id 27) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  310 naked-single-row: f-501,f-502,f-1,f-52,*,f-391,*
+==> f-525   (impossible (id 33) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  311 naked-single-row: f-501,f-502,f-1,f-52,*,f-377,*
+==> f-526   (impossible (id 32) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  312 naked-single-row: f-501,f-502,f-1,f-52,*,f-363,*
+==> f-527   (impossible (id 31) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  313 naked-single-column: f-501,f-502,f-1,f-52,*,f-181,*
+==> f-528   (impossible (id 13) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  314 naked-single-column: f-501,f-502,f-1,f-52,*,f-97,*
+==> f-529   (impossible (id 4) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  315 naked-single-column: f-501,f-502,f-1,f-52,*,f-69,*
+==> f-530   (impossible (id 1) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  316 naked-single-group: f-501,f-502,f-1,f-48,*,f-277,*
+==> f-531   (impossible (id 24) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  317 naked-single-group: f-501,f-502,f-1,f-48,*,f-263,*
+==> f-532   (impossible (id 23) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  318 naked-single-group: f-501,f-502,f-1,f-48,*,f-249,*
+==> f-533   (impossible (id 22) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  319 naked-single-group: f-501,f-502,f-1,f-48,*,f-235,*
+==> f-534   (impossible (id 20) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  320 naked-single-row: f-501,f-502,f-1,f-48,*,f-193,*
+==> f-535   (impossible (id 15) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  321 naked-single-row: f-501,f-502,f-1,f-48,*,f-179,*
+==> f-536   (impossible (id 13) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  322 naked-single-column: f-501,f-502,f-1,f-48,*,f-417,*
+==> f-537   (impossible (id 36) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  323 naked-single-column: f-501,f-502,f-1,f-48,*,f-389,*
+==> f-538   (impossible (id 33) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  324 naked-single-column: f-501,f-502,f-1,f-48,*,f-165,*
+==> f-539   (impossible (id 9) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  325 naked-single-group: f-501,f-502,f-1,f-46,*,f-281,*
+==> f-540   (impossible (id 24) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  326 naked-single-group: f-501,f-502,f-1,f-46,*,f-267,*
+==> f-541   (impossible (id 23) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  327 naked-single-group: f-501,f-502,f-1,f-46,*,f-253,*
+==> f-542   (impossible (id 22) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  328 naked-single-group: f-501,f-502,f-1,f-46,*,f-239,*
+==> f-543   (impossible (id 20) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  329 naked-single-row: f-501,f-502,f-1,f-46,*,f-197,*
+==> f-544   (impossible (id 15) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  330 naked-single-row: f-501,f-502,f-1,f-46,*,f-183,*
+==> f-545   (impossible (id 13) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  331 naked-single-column: f-501,f-502,f-1,f-46,*,f-407,*
+==> f-546   (impossible (id 34) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  332 naked-single-column: f-501,f-502,f-1,f-46,*,f-365,*
+==> f-547   (impossible (id 31) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  333 naked-single-column: f-501,f-502,f-1,f-46,*,f-141,*
+==> f-548   (impossible (id 7) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  334 naked-single-group: f-501,f-502,f-1,f-43,*,f-211,*
+==> f-549   (impossible (id 17) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  335 naked-single-column: f-501,f-502,f-1,f-43,*,f-99,*
+==> f-550   (impossible (id 4) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  336 naked-single-column: f-501,f-502,f-1,f-43,*,f-71,*
+==> f-551   (impossible (id 1) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  337 naked-single-group: f-501,f-502,f-1,f-41,*,f-229,*
+==> f-552   (impossible (id 18) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  338 naked-single-group: f-501,f-502,f-1,f-41,*,f-215,*
+==> f-553   (impossible (id 17) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  339 naked-single-group: f-501,f-502,f-1,f-41,*,f-201,*
+==> f-554   (impossible (id 15) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  340 naked-single-group: f-501,f-502,f-1,f-41,*,f-187,*
+==> f-555   (impossible (id 13) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  341 naked-single-column: f-501,f-502,f-1,f-41,*,f-299,*
+==> f-556   (impossible (id 26) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  342 naked-single-column: f-501,f-502,f-1,f-41,*,f-117,*
+==> f-557   (impossible (id 5) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  343 naked-single-column: f-501,f-502,f-1,f-41,*,f-89,*
+==> f-558   (impossible (id 2) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  344 naked-single-group: f-501,f-502,f-1,f-39,*,f-171,*
+==> f-559   (impossible (id 9) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  345 naked-single-group: f-501,f-502,f-1,f-39,*,f-157,*
+==> f-560   (impossible (id 8) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  346 naked-single-group: f-501,f-502,f-1,f-39,*,f-143,*
+==> f-561   (impossible (id 7) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  347 naked-single-row: f-501,f-502,f-1,f-39,*,f-129,*
+==> f-562   (impossible (id 6) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  348 naked-single-row: f-501,f-502,f-1,f-39,*,f-115,*
+==> f-563   (impossible (id 5) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  349 naked-single-row: f-501,f-502,f-1,f-39,*,f-101,*
+==> f-564   (impossible (id 4) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  350 naked-single-column: f-501,f-502,f-1,f-39,*,f-423,*
+==> f-565   (impossible (id 36) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  351 naked-single-column: f-501,f-502,f-1,f-39,*,f-395,*
+==> f-566   (impossible (id 33) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  352 naked-single-column: f-501,f-502,f-1,f-39,*,f-283,*
+==> f-567   (impossible (id 24) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  353 naked-single-group: f-501,f-502,f-1,f-38,*,f-153,*
+==> f-568   (impossible (id 8) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  354 naked-single-group: f-501,f-502,f-1,f-38,*,f-139,*
+==> f-569   (impossible (id 7) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  355 naked-single-row: f-501,f-502,f-1,f-38,*,f-125,*
+==> f-570   (impossible (id 6) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  356 naked-single-row: f-501,f-502,f-1,f-38,*,f-111,*
+==> f-571   (impossible (id 5) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  357 naked-single-column: f-501,f-502,f-1,f-38,*,f-265,*
+==> f-572   (impossible (id 23) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  358 naked-single-column: f-501,f-502,f-1,f-38,*,f-237,*
+==> f-573   (impossible (id 20) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  359 naked-single-group: f-501,f-502,f-1,f-37,*,f-163,*
+==> f-574   (impossible (id 9) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  360 naked-single-group: f-501,f-502,f-1,f-37,*,f-149,*
+==> f-575   (impossible (id 8) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  361 naked-single-group: f-501,f-502,f-1,f-37,*,f-135,*
+==> f-576   (impossible (id 7) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  362 naked-single-row: f-501,f-502,f-1,f-37,*,f-121,*
+==> f-577   (impossible (id 6) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  363 naked-single-row: f-501,f-502,f-1,f-37,*,f-107,*
+==> f-578   (impossible (id 5) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  364 naked-single-row: f-501,f-502,f-1,f-37,*,f-93,*
+==> f-579   (impossible (id 4) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  365 naked-single-column: f-501,f-502,f-1,f-37,*,f-401,*
+==> f-580   (impossible (id 34) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  366 naked-single-column: f-501,f-502,f-1,f-37,*,f-359,*
+==> f-581   (impossible (id 31) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  367 naked-single-column: f-501,f-502,f-1,f-37,*,f-247,*
+==> f-582   (impossible (id 22) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  368 naked-single-group: f-501,f-502,f-1,f-30,*,f-79,*
+==> f-583   (impossible (id 2) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  369 naked-single-group: f-501,f-502,f-1,f-30,*,f-65,*
+==> f-584   (impossible (id 1) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  370 naked-single-column: f-501,f-502,f-1,f-30,*,f-345,*
+==> f-585   (impossible (id 30) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  371 naked-single-column: f-501,f-502,f-1,f-30,*,f-303,*
+==> f-586   (impossible (id 27) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  372 naked-single-column: f-501,f-502,f-1,f-30,*,f-219,*
+==> f-587   (impossible (id 18) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  373 naked-single-column: f-501,f-502,f-1,f-30,*,f-191,*
+==> f-588   (impossible (id 15) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  374 begin-elimination: f-501,*
+<== f-501   (phase match)
+==> f-589   (phase elimination)
+FIRE  375 eliminate-not-employed: f-589,f-584,*,*,*,f-65,*
+<== f-584   (impossible (id 1) (value 1) (rank 1) (reason "Naked Single"))
+<== f-65    (possible (row 1) (column 1) (value 1) (group 1) (diagonal 1) (id 1))
+==> f-590   (technique-employed (reason "Naked Single") (rank 1))
+FIRE  376 eliminate-employed: f-589,f-530,*,*,*,f-69,*
+<== f-530   (impossible (id 1) (value 3) (rank 1) (reason "Naked Single"))
+<== f-69    (possible (row 1) (column 1) (value 3) (group 1) (diagonal 1) (id 1))
+FIRE  377 eliminate-employed: f-589,f-551,*,*,*,f-71,*
+<== f-551   (impossible (id 1) (value 4) (rank 1) (reason "Naked Single"))
+<== f-71    (possible (row 1) (column 1) (value 4) (group 1) (diagonal 1) (id 1))
+FIRE  378 eliminate-employed: f-589,f-583,*,*,*,f-79,*
+<== f-583   (impossible (id 2) (value 1) (rank 1) (reason "Naked Single"))
+<== f-79    (possible (row 1) (column 2) (value 1) (group 1) (diagonal 0) (id 2))
+FIRE  379 eliminate-employed: f-589,f-558,*,*,*,f-89,*
+<== f-558   (impossible (id 2) (value 6) (rank 1) (reason "Naked Single"))
+<== f-89    (possible (row 1) (column 2) (value 6) (group 1) (diagonal 0) (id 2))
+FIRE  380 eliminate-employed: f-589,f-579,*,*,*,f-93,*
+<== f-579   (impossible (id 4) (value 1) (rank 1) (reason "Naked Single"))
+<== f-93    (possible (row 2) (column 1) (value 1) (group 1) (diagonal 0) (id 4))
+FIRE  381 eliminate-employed: f-589,f-529,*,*,*,f-97,*
+<== f-529   (impossible (id 4) (value 3) (rank 1) (reason "Naked Single"))
+<== f-97    (possible (row 2) (column 1) (value 3) (group 1) (diagonal 0) (id 4))
+FIRE  382 eliminate-employed: f-589,f-550,*,*,*,f-99,*
+<== f-550   (impossible (id 4) (value 4) (rank 1) (reason "Naked Single"))
+<== f-99    (possible (row 2) (column 1) (value 4) (group 1) (diagonal 0) (id 4))
+FIRE  383 eliminate-employed: f-589,f-564,*,*,*,f-101,*
+<== f-564   (impossible (id 4) (value 5) (rank 1) (reason "Naked Single"))
+<== f-101   (possible (row 2) (column 1) (value 5) (group 1) (diagonal 0) (id 4))
+FIRE  384 eliminate-employed: f-589,f-578,*,*,*,f-107,*
+<== f-578   (impossible (id 5) (value 1) (rank 1) (reason "Naked Single"))
+<== f-107   (possible (row 2) (column 2) (value 1) (group 1) (diagonal 1) (id 5))
+FIRE  385 eliminate-employed: f-589,f-571,*,*,*,f-111,*
+<== f-571   (impossible (id 5) (value 3) (rank 1) (reason "Naked Single"))
+<== f-111   (possible (row 2) (column 2) (value 3) (group 1) (diagonal 1) (id 5))
+FIRE  386 eliminate-employed: f-589,f-563,*,*,*,f-115,*
+<== f-563   (impossible (id 5) (value 5) (rank 1) (reason "Naked Single"))
+<== f-115   (possible (row 2) (column 2) (value 5) (group 1) (diagonal 1) (id 5))
+FIRE  387 eliminate-employed: f-589,f-557,*,*,*,f-117,*
+<== f-557   (impossible (id 5) (value 6) (rank 1) (reason "Naked Single"))
+<== f-117   (possible (row 2) (column 2) (value 6) (group 1) (diagonal 1) (id 5))
+FIRE  388 eliminate-employed: f-589,f-577,*,*,*,f-121,*
+<== f-577   (impossible (id 6) (value 1) (rank 1) (reason "Naked Single"))
+<== f-121   (possible (row 2) (column 3) (value 1) (group 1) (diagonal 0) (id 6))
+FIRE  389 eliminate-employed: f-589,f-570,*,*,*,f-125,*
+<== f-570   (impossible (id 6) (value 3) (rank 1) (reason "Naked Single"))
+<== f-125   (possible (row 2) (column 3) (value 3) (group 1) (diagonal 0) (id 6))
+FIRE  390 eliminate-employed: f-589,f-562,*,*,*,f-129,*
+<== f-562   (impossible (id 6) (value 5) (rank 1) (reason "Naked Single"))
+<== f-129   (possible (row 2) (column 3) (value 5) (group 1) (diagonal 0) (id 6))
+FIRE  391 eliminate-employed: f-589,f-576,*,*,*,f-135,*
+<== f-576   (impossible (id 7) (value 1) (rank 1) (reason "Naked Single"))
+<== f-135   (possible (row 1) (column 4) (value 1) (group 2) (diagonal 0) (id 7))
+FIRE  392 eliminate-employed: f-589,f-569,*,*,*,f-139,*
+<== f-569   (impossible (id 7) (value 3) (rank 1) (reason "Naked Single"))
+<== f-139   (possible (row 1) (column 4) (value 3) (group 2) (diagonal 0) (id 7))
+FIRE  393 eliminate-employed: f-589,f-548,*,*,*,f-141,*
+<== f-548   (impossible (id 7) (value 4) (rank 1) (reason "Naked Single"))
+<== f-141   (possible (row 1) (column 4) (value 4) (group 2) (diagonal 0) (id 7))
+FIRE  394 eliminate-employed: f-589,f-561,*,*,*,f-143,*
+<== f-561   (impossible (id 7) (value 5) (rank 1) (reason "Naked Single"))
+<== f-143   (possible (row 1) (column 4) (value 5) (group 2) (diagonal 0) (id 7))
+FIRE  395 eliminate-employed: f-589,f-575,*,*,*,f-149,*
+<== f-575   (impossible (id 8) (value 1) (rank 1) (reason "Naked Single"))
+<== f-149   (possible (row 1) (column 5) (value 1) (group 2) (diagonal 0) (id 8))
+FIRE  396 eliminate-employed: f-589,f-568,*,*,*,f-153,*
+<== f-568   (impossible (id 8) (value 3) (rank 1) (reason "Naked Single"))
+<== f-153   (possible (row 1) (column 5) (value 3) (group 2) (diagonal 0) (id 8))
+FIRE  397 eliminate-employed: f-589,f-560,*,*,*,f-157,*
+<== f-560   (impossible (id 8) (value 5) (rank 1) (reason "Naked Single"))
+<== f-157   (possible (row 1) (column 5) (value 5) (group 2) (diagonal 0) (id 8))
+FIRE  398 eliminate-employed: f-589,f-521,*,*,*,f-159,*
+<== f-521   (impossible (id 8) (value 6) (rank 1) (reason "Naked Single"))
+<== f-159   (possible (row 1) (column 5) (value 6) (group 2) (diagonal 0) (id 8))
+FIRE  399 eliminate-employed: f-589,f-574,*,*,*,f-163,*
+<== f-574   (impossible (id 9) (value 1) (rank 1) (reason "Naked Single"))
+<== f-163   (possible (row 1) (column 6) (value 1) (group 2) (diagonal 2) (id 9))
+FIRE  400 eliminate-employed: f-589,f-539,*,*,*,f-165,*
+<== f-539   (impossible (id 9) (value 2) (rank 1) (reason "Naked Single"))
+<== f-165   (possible (row 1) (column 6) (value 2) (group 2) (diagonal 2) (id 9))
+FIRE  401 eliminate-employed: f-589,f-510,*,*,*,f-167,*
+<== f-510   (impossible (id 9) (value 3) (rank 1) (reason "Naked Single"))
+<== f-167   (possible (row 1) (column 6) (value 3) (group 2) (diagonal 2) (id 9))
+FIRE  402 eliminate-employed: f-589,f-506,*,*,*,f-169,*
+<== f-506   (impossible (id 9) (value 4) (rank 1) (reason "Naked Single"))
+<== f-169   (possible (row 1) (column 6) (value 4) (group 2) (diagonal 2) (id 9))
+FIRE  403 eliminate-employed: f-589,f-559,*,*,*,f-171,*
+<== f-559   (impossible (id 9) (value 5) (rank 1) (reason "Naked Single"))
+<== f-171   (possible (row 1) (column 6) (value 5) (group 2) (diagonal 2) (id 9))
+FIRE  404 remove-unsolved: f-589,f-175,f-173,*
+<== f-175   (unsolved (row 1) (column 6))
+FIRE  405 eliminate-employed: f-589,f-536,*,*,*,f-179,*
+<== f-536   (impossible (id 13) (value 2) (rank 1) (reason "Naked Single"))
+<== f-179   (possible (row 3) (column 1) (value 2) (group 3) (diagonal 0) (id 13))
+FIRE  406 eliminate-employed: f-589,f-528,*,*,*,f-181,*
+<== f-528   (impossible (id 13) (value 3) (rank 1) (reason "Naked Single"))
+<== f-181   (possible (row 3) (column 1) (value 3) (group 3) (diagonal 0) (id 13))
+FIRE  407 eliminate-employed: f-589,f-545,*,*,*,f-183,*
+<== f-545   (impossible (id 13) (value 4) (rank 1) (reason "Naked Single"))
+<== f-183   (possible (row 3) (column 1) (value 4) (group 3) (diagonal 0) (id 13))
+FIRE  408 eliminate-employed: f-589,f-555,*,*,*,f-187,*
+<== f-555   (impossible (id 13) (value 6) (rank 1) (reason "Naked Single"))
+<== f-187   (possible (row 3) (column 1) (value 6) (group 3) (diagonal 0) (id 13))
+FIRE  409 eliminate-employed: f-589,f-588,*,*,*,f-191,*
+<== f-588   (impossible (id 15) (value 1) (rank 1) (reason "Naked Single"))
+<== f-191   (possible (row 3) (column 3) (value 1) (group 3) (diagonal 1) (id 15))
+FIRE  410 eliminate-employed: f-589,f-535,*,*,*,f-193,*
+<== f-535   (impossible (id 15) (value 2) (rank 1) (reason "Naked Single"))
+<== f-193   (possible (row 3) (column 3) (value 2) (group 3) (diagonal 1) (id 15))
+FIRE  411 eliminate-employed: f-589,f-544,*,*,*,f-197,*
+<== f-544   (impossible (id 15) (value 4) (rank 1) (reason "Naked Single"))
+<== f-197   (possible (row 3) (column 3) (value 4) (group 3) (diagonal 1) (id 15))
+FIRE  412 eliminate-employed: f-589,f-554,*,*,*,f-201,*
+<== f-554   (impossible (id 15) (value 6) (rank 1) (reason "Naked Single"))
+<== f-201   (possible (row 3) (column 3) (value 6) (group 3) (diagonal 1) (id 15))
+FIRE  413 eliminate-employed: f-589,f-549,*,*,*,f-211,*
+<== f-549   (impossible (id 17) (value 4) (rank 1) (reason "Naked Single"))
+<== f-211   (possible (row 4) (column 2) (value 4) (group 3) (diagonal 0) (id 17))
+FIRE  414 eliminate-employed: f-589,f-553,*,*,*,f-215,*
+<== f-553   (impossible (id 17) (value 6) (rank 1) (reason "Naked Single"))
+<== f-215   (possible (row 4) (column 2) (value 6) (group 3) (diagonal 0) (id 17))
+FIRE  415 eliminate-employed: f-589,f-587,*,*,*,f-219,*
+<== f-587   (impossible (id 18) (value 1) (rank 1) (reason "Naked Single"))
+<== f-219   (possible (row 4) (column 3) (value 1) (group 3) (diagonal 2) (id 18))
+FIRE  416 eliminate-employed: f-589,f-509,*,*,*,f-223,*
+<== f-509   (impossible (id 18) (value 3) (rank 1) (reason "Naked Single"))
+<== f-223   (possible (row 4) (column 3) (value 3) (group 3) (diagonal 2) (id 18))
+FIRE  417 eliminate-employed: f-589,f-505,*,*,*,f-225,*
+<== f-505   (impossible (id 18) (value 4) (rank 1) (reason "Naked Single"))
+<== f-225   (possible (row 4) (column 3) (value 4) (group 3) (diagonal 2) (id 18))
+FIRE  418 eliminate-employed: f-589,f-552,*,*,*,f-229,*
+<== f-552   (impossible (id 18) (value 6) (rank 1) (reason "Naked Single"))
+<== f-229   (possible (row 4) (column 3) (value 6) (group 3) (diagonal 2) (id 18))
+FIRE  419 eliminate-employed: f-589,f-534,*,*,*,f-235,*
+<== f-534   (impossible (id 20) (value 2) (rank 1) (reason "Naked Single"))
+<== f-235   (possible (row 3) (column 5) (value 2) (group 4) (diagonal 0) (id 20))
+FIRE  420 eliminate-employed: f-589,f-573,*,*,*,f-237,*
+<== f-573   (impossible (id 20) (value 3) (rank 1) (reason "Naked Single"))
+<== f-237   (possible (row 3) (column 5) (value 3) (group 4) (diagonal 0) (id 20))
+FIRE  421 eliminate-employed: f-589,f-543,*,*,*,f-239,*
+<== f-543   (impossible (id 20) (value 4) (rank 1) (reason "Naked Single"))
+<== f-239   (possible (row 3) (column 5) (value 4) (group 4) (diagonal 0) (id 20))
+FIRE  422 eliminate-employed: f-589,f-520,*,*,*,f-243,*
+<== f-520   (impossible (id 20) (value 6) (rank 1) (reason "Naked Single"))
+<== f-243   (possible (row 3) (column 5) (value 6) (group 4) (diagonal 0) (id 20))
+FIRE  423 eliminate-employed: f-589,f-582,*,*,*,f-247,*
+<== f-582   (impossible (id 22) (value 1) (rank 1) (reason "Naked Single"))
+<== f-247   (possible (row 4) (column 4) (value 1) (group 4) (diagonal 1) (id 22))
+FIRE  424 eliminate-employed: f-589,f-533,*,*,*,f-249,*
+<== f-533   (impossible (id 22) (value 2) (rank 1) (reason "Naked Single"))
+<== f-249   (possible (row 4) (column 4) (value 2) (group 4) (diagonal 1) (id 22))
+FIRE  425 eliminate-employed: f-589,f-542,*,*,*,f-253,*
+<== f-542   (impossible (id 22) (value 4) (rank 1) (reason "Naked Single"))
+<== f-253   (possible (row 4) (column 4) (value 4) (group 4) (diagonal 1) (id 22))
+FIRE  426 eliminate-employed: f-589,f-532,*,*,*,f-263,*
+<== f-532   (impossible (id 23) (value 2) (rank 1) (reason "Naked Single"))
+<== f-263   (possible (row 4) (column 5) (value 2) (group 4) (diagonal 0) (id 23))
+FIRE  427 eliminate-employed: f-589,f-572,*,*,*,f-265,*
+<== f-572   (impossible (id 23) (value 3) (rank 1) (reason "Naked Single"))
+<== f-265   (possible (row 4) (column 5) (value 3) (group 4) (diagonal 0) (id 23))
+FIRE  428 eliminate-employed: f-589,f-541,*,*,*,f-267,*
+<== f-541   (impossible (id 23) (value 4) (rank 1) (reason "Naked Single"))
+<== f-267   (possible (row 4) (column 5) (value 4) (group 4) (diagonal 0) (id 23))
+FIRE  429 eliminate-employed: f-589,f-519,*,*,*,f-271,*
+<== f-519   (impossible (id 23) (value 6) (rank 1) (reason "Naked Single"))
+<== f-271   (possible (row 4) (column 5) (value 6) (group 4) (diagonal 0) (id 23))
+FIRE  430 eliminate-employed: f-589,f-531,*,*,*,f-277,*
+<== f-531   (impossible (id 24) (value 2) (rank 1) (reason "Naked Single"))
+<== f-277   (possible (row 4) (column 6) (value 2) (group 4) (diagonal 0) (id 24))
+FIRE  431 eliminate-employed: f-589,f-540,*,*,*,f-281,*
+<== f-540   (impossible (id 24) (value 4) (rank 1) (reason "Naked Single"))
+<== f-281   (possible (row 4) (column 6) (value 4) (group 4) (diagonal 0) (id 24))
+FIRE  432 eliminate-employed: f-589,f-567,*,*,*,f-283,*
+<== f-567   (impossible (id 24) (value 5) (rank 1) (reason "Naked Single"))
+<== f-283   (possible (row 4) (column 6) (value 5) (group 4) (diagonal 0) (id 24))
+FIRE  433 eliminate-employed: f-589,f-508,*,*,*,f-293,*
+<== f-508   (impossible (id 26) (value 3) (rank 1) (reason "Naked Single"))
+<== f-293   (possible (row 5) (column 2) (value 3) (group 5) (diagonal 2) (id 26))
+FIRE  434 eliminate-employed: f-589,f-504,*,*,*,f-295,*
+<== f-504   (impossible (id 26) (value 4) (rank 1) (reason "Naked Single"))
+<== f-295   (possible (row 5) (column 2) (value 4) (group 5) (diagonal 2) (id 26))
+FIRE  435 eliminate-employed: f-589,f-556,*,*,*,f-299,*
+<== f-556   (impossible (id 26) (value 6) (rank 1) (reason "Naked Single"))
+<== f-299   (possible (row 5) (column 2) (value 6) (group 5) (diagonal 2) (id 26))
+FIRE  436 eliminate-employed: f-589,f-586,*,*,*,f-303,*
+<== f-586   (impossible (id 27) (value 1) (rank 1) (reason "Naked Single"))
+<== f-303   (possible (row 5) (column 3) (value 1) (group 5) (diagonal 0) (id 27))
+FIRE  437 eliminate-employed: f-589,f-524,*,*,*,f-307,*
+<== f-524   (impossible (id 27) (value 3) (rank 1) (reason "Naked Single"))
+<== f-307   (possible (row 5) (column 3) (value 3) (group 5) (diagonal 0) (id 27))
+FIRE  438 eliminate-employed: f-589,f-507,*,*,*,f-321,*
+<== f-507   (impossible (id 28) (value 3) (rank 1) (reason "Naked Single"))
+<== f-321   (possible (row 6) (column 1) (value 3) (group 5) (diagonal 2) (id 28))
+FIRE  439 eliminate-employed: f-589,f-503,*,*,*,f-323,*
+<== f-503   (impossible (id 28) (value 4) (rank 1) (reason "Naked Single"))
+<== f-323   (possible (row 6) (column 1) (value 4) (group 5) (diagonal 2) (id 28))
+FIRE  440 eliminate-employed: f-589,f-518,*,*,*,f-327,*
+<== f-518   (impossible (id 28) (value 6) (rank 1) (reason "Naked Single"))
+<== f-327   (possible (row 6) (column 1) (value 6) (group 5) (diagonal 2) (id 28))
+FIRE  441 eliminate-employed: f-589,f-523,*,*,*,f-335,*
+<== f-523   (impossible (id 29) (value 3) (rank 1) (reason "Naked Single"))
+<== f-335   (possible (row 6) (column 2) (value 3) (group 5) (diagonal 0) (id 29))
+FIRE  442 eliminate-employed: f-589,f-517,*,*,*,f-341,*
+<== f-517   (impossible (id 29) (value 6) (rank 1) (reason "Naked Single"))
+<== f-341   (possible (row 6) (column 2) (value 6) (group 5) (diagonal 0) (id 29))
+FIRE  443 eliminate-employed: f-589,f-585,*,*,*,f-345,*
+<== f-585   (impossible (id 30) (value 1) (rank 1) (reason "Naked Single"))
+<== f-345   (possible (row 6) (column 3) (value 1) (group 5) (diagonal 0) (id 30))
+FIRE  444 eliminate-employed: f-589,f-522,*,*,*,f-349,*
+<== f-522   (impossible (id 30) (value 3) (rank 1) (reason "Naked Single"))
+<== f-349   (possible (row 6) (column 3) (value 3) (group 5) (diagonal 0) (id 30))
+FIRE  445 eliminate-employed: f-589,f-516,*,*,*,f-355,*
+<== f-516   (impossible (id 30) (value 6) (rank 1) (reason "Naked Single"))
+<== f-355   (possible (row 6) (column 3) (value 6) (group 5) (diagonal 0) (id 30))
+FIRE  446 eliminate-employed: f-589,f-581,*,*,*,f-359,*
+<== f-581   (impossible (id 31) (value 1) (rank 1) (reason "Naked Single"))
+<== f-359   (possible (row 5) (column 4) (value 1) (group 6) (diagonal 0) (id 31))
+FIRE  447 eliminate-employed: f-589,f-527,*,*,*,f-363,*
+<== f-527   (impossible (id 31) (value 3) (rank 1) (reason "Naked Single"))
+<== f-363   (possible (row 5) (column 4) (value 3) (group 6) (diagonal 0) (id 31))
+FIRE  448 eliminate-employed: f-589,f-547,*,*,*,f-365,*
+<== f-547   (impossible (id 31) (value 4) (rank 1) (reason "Naked Single"))
+<== f-365   (possible (row 5) (column 4) (value 4) (group 6) (diagonal 0) (id 31))
+FIRE  449 eliminate-employed: f-589,f-515,*,*,*,f-369,*
+<== f-515   (impossible (id 31) (value 6) (rank 1) (reason "Naked Single"))
+<== f-369   (possible (row 5) (column 4) (value 6) (group 6) (diagonal 0) (id 31))
+FIRE  450 eliminate-employed: f-589,f-526,*,*,*,f-377,*
+<== f-526   (impossible (id 32) (value 3) (rank 1) (reason "Naked Single"))
+<== f-377   (possible (row 5) (column 5) (value 3) (group 6) (diagonal 1) (id 32))
+FIRE  451 eliminate-employed: f-589,f-514,*,*,*,f-383,*
+<== f-514   (impossible (id 32) (value 6) (rank 1) (reason "Naked Single"))
+<== f-383   (possible (row 5) (column 5) (value 6) (group 6) (diagonal 1) (id 32))
+FIRE  452 eliminate-employed: f-589,f-538,*,*,*,f-389,*
+<== f-538   (impossible (id 33) (value 2) (rank 1) (reason "Naked Single"))
+<== f-389   (possible (row 5) (column 6) (value 2) (group 6) (diagonal 0) (id 33))
+FIRE  453 eliminate-employed: f-589,f-525,*,*,*,f-391,*
+<== f-525   (impossible (id 33) (value 3) (rank 1) (reason "Naked Single"))
+<== f-391   (possible (row 5) (column 6) (value 3) (group 6) (diagonal 0) (id 33))
+FIRE  454 eliminate-employed: f-589,f-566,*,*,*,f-395,*
+<== f-566   (impossible (id 33) (value 5) (rank 1) (reason "Naked Single"))
+<== f-395   (possible (row 5) (column 6) (value 5) (group 6) (diagonal 0) (id 33))
+FIRE  455 eliminate-employed: f-589,f-513,*,*,*,f-397,*
+<== f-513   (impossible (id 33) (value 6) (rank 1) (reason "Naked Single"))
+<== f-397   (possible (row 5) (column 6) (value 6) (group 6) (diagonal 0) (id 33))
+FIRE  456 eliminate-employed: f-589,f-580,*,*,*,f-401,*
+<== f-580   (impossible (id 34) (value 1) (rank 1) (reason "Naked Single"))
+<== f-401   (possible (row 6) (column 4) (value 1) (group 6) (diagonal 0) (id 34))
+FIRE  457 eliminate-employed: f-589,f-546,*,*,*,f-407,*
+<== f-546   (impossible (id 34) (value 4) (rank 1) (reason "Naked Single"))
+<== f-407   (possible (row 6) (column 4) (value 4) (group 6) (diagonal 0) (id 34))
+FIRE  458 eliminate-employed: f-589,f-512,*,*,*,f-411,*
+<== f-512   (impossible (id 34) (value 6) (rank 1) (reason "Naked Single"))
+<== f-411   (possible (row 6) (column 4) (value 6) (group 6) (diagonal 0) (id 34))
+FIRE  459 eliminate-employed: f-589,f-537,*,*,*,f-417,*
+<== f-537   (impossible (id 36) (value 2) (rank 1) (reason "Naked Single"))
+<== f-417   (possible (row 6) (column 6) (value 2) (group 6) (diagonal 1) (id 36))
+FIRE  460 eliminate-employed: f-589,f-565,*,*,*,f-423,*
+<== f-565   (impossible (id 36) (value 5) (rank 1) (reason "Naked Single"))
+<== f-423   (possible (row 6) (column 6) (value 5) (group 6) (diagonal 1) (id 36))
+FIRE  461 eliminate-employed: f-589,f-511,*,*,*,f-425,*
+<== f-511   (impossible (id 36) (value 6) (rank 1) (reason "Naked Single"))
+<== f-425   (possible (row 6) (column 6) (value 6) (group 6) (diagonal 1) (id 36))
+FIRE  462 elimination-done: f-589,*
+<== f-589   (phase elimination)
+==> f-591   (phase match)
+FIRE  463 naked-single-group: f-591,f-502,f-1,f-173,*,f-145,*
+==> f-592   (impossible (id 7) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  464 naked-single-row: f-591,f-502,f-1,f-173,*,f-75,*
+==> f-593   (impossible (id 1) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  465 naked-single-column: f-591,f-502,f-1,f-173,*,f-285,*
+==> f-594   (impossible (id 24) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  466 begin-elimination: f-591,*
+<== f-591   (phase match)
+==> f-595   (phase elimination)
+FIRE  467 eliminate-employed: f-595,f-593,*,*,*,f-75,*
+<== f-593   (impossible (id 1) (value 6) (rank 1) (reason "Naked Single"))
+<== f-75    (possible (row 1) (column 1) (value 6) (group 1) (diagonal 1) (id 1))
+FIRE  468 eliminate-employed: f-595,f-592,*,*,*,f-145,*
+<== f-592   (impossible (id 7) (value 6) (rank 1) (reason "Naked Single"))
+<== f-145   (possible (row 1) (column 4) (value 6) (group 2) (diagonal 0) (id 7))
+FIRE  469 remove-unsolved: f-595,f-147,f-137,*
+<== f-147   (unsolved (row 1) (column 4))
+FIRE  470 eliminate-employed: f-595,f-594,*,*,*,f-285,*
+<== f-594   (impossible (id 24) (value 6) (rank 1) (reason "Naked Single"))
+<== f-285   (possible (row 4) (column 6) (value 6) (group 4) (diagonal 0) (id 24))
+FIRE  471 elimination-done: f-595,*
+<== f-595   (phase elimination)
+==> f-596   (phase match)
+FIRE  472 naked-single-group: f-596,f-502,f-1,f-137,*,f-151,*
+==> f-597   (impossible (id 8) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  473 naked-single-row: f-596,f-502,f-1,f-137,*,f-81,*
+==> f-598   (impossible (id 2) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  474 naked-single-row: f-596,f-502,f-1,f-137,*,f-67,*
+==> f-599   (impossible (id 1) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  475 naked-single-column: f-596,f-502,f-1,f-137,*,f-403,*
+==> f-600   (impossible (id 34) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  476 naked-single-column: f-596,f-502,f-1,f-137,*,f-361,*
+==> f-601   (impossible (id 31) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  477 begin-elimination: f-596,*
+<== f-596   (phase match)
+==> f-602   (phase elimination)
+FIRE  478 eliminate-employed: f-602,f-599,*,*,*,f-67,*
+<== f-599   (impossible (id 1) (value 2) (rank 1) (reason "Naked Single"))
+<== f-67    (possible (row 1) (column 1) (value 2) (group 1) (diagonal 1) (id 1))
+FIRE  479 remove-unsolved: f-602,f-77,f-73,*
+<== f-77    (unsolved (row 1) (column 1))
+FIRE  480 eliminate-employed: f-602,f-598,*,*,*,f-81,*
+<== f-598   (impossible (id 2) (value 2) (rank 1) (reason "Naked Single"))
+<== f-81    (possible (row 1) (column 2) (value 2) (group 1) (diagonal 0) (id 2))
+FIRE  481 eliminate-employed: f-602,f-597,*,*,*,f-151,*
+<== f-597   (impossible (id 8) (value 2) (rank 1) (reason "Naked Single"))
+<== f-151   (possible (row 1) (column 5) (value 2) (group 2) (diagonal 0) (id 8))
+FIRE  482 remove-unsolved: f-602,f-161,f-155,*
+<== f-161   (unsolved (row 1) (column 5))
+FIRE  483 eliminate-employed: f-602,f-601,*,*,*,f-361,*
+<== f-601   (impossible (id 31) (value 2) (rank 1) (reason "Naked Single"))
+<== f-361   (possible (row 5) (column 4) (value 2) (group 6) (diagonal 0) (id 31))
+FIRE  484 remove-unsolved: f-602,f-371,f-367,*
+<== f-371   (unsolved (row 5) (column 4))
+FIRE  485 eliminate-employed: f-602,f-600,*,*,*,f-403,*
+<== f-600   (impossible (id 34) (value 2) (rank 1) (reason "Naked Single"))
+<== f-403   (possible (row 6) (column 4) (value 2) (group 6) (diagonal 0) (id 34))
+FIRE  486 elimination-done: f-602,*
+<== f-602   (phase elimination)
+==> f-603   (phase match)
+FIRE  487 naked-single-x: f-603,f-502,f-1,f-73,*,f-381,*
+==> f-604   (impossible (id 32) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  488 naked-single-x: f-603,f-502,f-1,f-73,*,f-255,*
+==> f-605   (impossible (id 22) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  489 naked-single-x: f-603,f-502,f-1,f-73,*,f-199,*
+==> f-606   (impossible (id 15) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  490 naked-single-group: f-603,f-502,f-1,f-367,*,f-409,*
+==> f-607   (impossible (id 34) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  491 naked-single-row: f-603,f-502,f-1,f-367,*,f-311,*
+==> f-608   (impossible (id 27) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  492 naked-single-row: f-603,f-502,f-1,f-367,*,f-297,*
+==> f-609   (impossible (id 26) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  493 naked-single-row: f-603,f-502,f-1,f-155,*,f-85,*
+==> f-610   (impossible (id 2) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  494 naked-single-column: f-603,f-502,f-1,f-155,*,f-379,*
+==> f-611   (impossible (id 32) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  495 naked-single-group: f-603,f-502,f-1,f-73,*,f-87,*
+==> f-612   (impossible (id 2) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  496 naked-single-column: f-603,f-502,f-1,f-73,*,f-325,*
+==> f-613   (impossible (id 28) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  497 naked-single-column: f-603,f-502,f-1,f-73,*,f-185,*
+==> f-614   (impossible (id 13) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  498 begin-elimination: f-603,*
+<== f-603   (phase match)
+==> f-615   (phase elimination)
+FIRE  499 eliminate-employed: f-615,f-610,*,*,*,f-85,*
+<== f-610   (impossible (id 2) (value 4) (rank 1) (reason "Naked Single"))
+<== f-85    (possible (row 1) (column 2) (value 4) (group 1) (diagonal 0) (id 2))
+FIRE  500 eliminate-employed: f-615,f-612,*,*,*,f-87,*
+<== f-612   (impossible (id 2) (value 5) (rank 1) (reason "Naked Single"))
+<== f-87    (possible (row 1) (column 2) (value 5) (group 1) (diagonal 0) (id 2))
+FIRE  501 remove-unsolved: f-615,f-91,f-83,*
+<== f-91    (unsolved (row 1) (column 2))
+FIRE  502 eliminate-employed: f-615,f-614,*,*,*,f-185,*
+<== f-614   (impossible (id 13) (value 5) (rank 1) (reason "Naked Single"))
+<== f-185   (possible (row 3) (column 1) (value 5) (group 3) (diagonal 0) (id 13))
+FIRE  503 remove-unsolved: f-615,f-189,f-177,*
+<== f-189   (unsolved (row 3) (column 1))
+FIRE  504 eliminate-employed: f-615,f-606,*,*,*,f-199,*
+<== f-606   (impossible (id 15) (value 5) (rank 1) (reason "Naked Single"))
+<== f-199   (possible (row 3) (column 3) (value 5) (group 3) (diagonal 1) (id 15))
+FIRE  505 remove-unsolved: f-615,f-203,f-195,*
+<== f-203   (unsolved (row 3) (column 3))
+FIRE  506 eliminate-employed: f-615,f-605,*,*,*,f-255,*
+<== f-605   (impossible (id 22) (value 5) (rank 1) (reason "Naked Single"))
+<== f-255   (possible (row 4) (column 4) (value 5) (group 4) (diagonal 1) (id 22))
+FIRE  507 eliminate-employed: f-615,f-609,*,*,*,f-297,*
+<== f-609   (impossible (id 26) (value 5) (rank 1) (reason "Naked Single"))
+<== f-297   (possible (row 5) (column 2) (value 5) (group 5) (diagonal 2) (id 26))
+FIRE  508 eliminate-employed: f-615,f-608,*,*,*,f-311,*
+<== f-608   (impossible (id 27) (value 5) (rank 1) (reason "Naked Single"))
+<== f-311   (possible (row 5) (column 3) (value 5) (group 5) (diagonal 0) (id 27))
+FIRE  509 eliminate-employed: f-615,f-613,*,*,*,f-325,*
+<== f-613   (impossible (id 28) (value 5) (rank 1) (reason "Naked Single"))
+<== f-325   (possible (row 6) (column 1) (value 5) (group 5) (diagonal 2) (id 28))
+FIRE  510 eliminate-employed: f-615,f-611,*,*,*,f-379,*
+<== f-611   (impossible (id 32) (value 4) (rank 1) (reason "Naked Single"))
+<== f-379   (possible (row 5) (column 5) (value 4) (group 6) (diagonal 1) (id 32))
+FIRE  511 eliminate-employed: f-615,f-604,*,*,*,f-381,*
+<== f-604   (impossible (id 32) (value 5) (rank 1) (reason "Naked Single"))
+<== f-381   (possible (row 5) (column 5) (value 5) (group 6) (diagonal 1) (id 32))
+FIRE  512 eliminate-employed: f-615,f-607,*,*,*,f-409,*
+<== f-607   (impossible (id 34) (value 5) (rank 1) (reason "Naked Single"))
+<== f-409   (possible (row 6) (column 4) (value 5) (group 6) (diagonal 0) (id 34))
+FIRE  513 remove-unsolved: f-615,f-413,f-405,*
+<== f-413   (unsolved (row 6) (column 4))
+FIRE  514 elimination-done: f-615,*
+<== f-615   (phase elimination)
+==> f-616   (phase match)
+FIRE  515 naked-single-x: f-616,f-502,f-1,f-195,*,f-419,*
+==> f-617   (impossible (id 36) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  516 naked-single-x: f-616,f-502,f-1,f-195,*,f-251,*
+==> f-618   (impossible (id 22) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  517 naked-single-group: f-616,f-502,f-1,f-195,*,f-209,*
+==> f-619   (impossible (id 17) (value 3) (rank 1) (reason "Naked Single"))
+FIRE  518 naked-single-group: f-616,f-502,f-1,f-177,*,f-205,*
+==> f-620   (impossible (id 17) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  519 naked-single-row: f-616,f-502,f-1,f-177,*,f-233,*
+==> f-621   (impossible (id 20) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  520 naked-single-column: f-616,f-502,f-1,f-177,*,f-317,*
+==> f-622   (impossible (id 28) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  521 begin-elimination: f-616,*
+<== f-616   (phase match)
+==> f-623   (phase elimination)
+FIRE  522 eliminate-employed: f-623,f-620,*,*,*,f-205,*
+<== f-620   (impossible (id 17) (value 1) (rank 1) (reason "Naked Single"))
+<== f-205   (possible (row 4) (column 2) (value 1) (group 3) (diagonal 0) (id 17))
+FIRE  523 eliminate-employed: f-623,f-619,*,*,*,f-209,*
+<== f-619   (impossible (id 17) (value 3) (rank 1) (reason "Naked Single"))
+<== f-209   (possible (row 4) (column 2) (value 3) (group 3) (diagonal 0) (id 17))
+FIRE  524 eliminate-employed: f-623,f-621,*,*,*,f-233,*
+<== f-621   (impossible (id 20) (value 1) (rank 1) (reason "Naked Single"))
+<== f-233   (possible (row 3) (column 5) (value 1) (group 4) (diagonal 0) (id 20))
+FIRE  525 remove-unsolved: f-623,f-245,f-241,*
+<== f-245   (unsolved (row 3) (column 5))
+FIRE  526 eliminate-employed: f-623,f-618,*,*,*,f-251,*
+<== f-618   (impossible (id 22) (value 3) (rank 1) (reason "Naked Single"))
+<== f-251   (possible (row 4) (column 4) (value 3) (group 4) (diagonal 1) (id 22))
+FIRE  527 remove-unsolved: f-623,f-259,f-257,*
+<== f-259   (unsolved (row 4) (column 4))
+FIRE  528 eliminate-employed: f-623,f-622,*,*,*,f-317,*
+<== f-622   (impossible (id 28) (value 1) (rank 1) (reason "Naked Single"))
+<== f-317   (possible (row 6) (column 1) (value 1) (group 5) (diagonal 2) (id 28))
+FIRE  529 remove-unsolved: f-623,f-329,f-319,*
+<== f-329   (unsolved (row 6) (column 1))
+FIRE  530 eliminate-employed: f-623,f-617,*,*,*,f-419,*
+<== f-617   (impossible (id 36) (value 3) (rank 1) (reason "Naked Single"))
+<== f-419   (possible (row 6) (column 6) (value 3) (group 6) (diagonal 1) (id 36))
+FIRE  531 elimination-done: f-623,*
+<== f-623   (phase elimination)
+==> f-624   (phase match)
+FIRE  532 naked-single-x: f-624,f-502,f-1,f-319,*,f-291,*
+==> f-625   (impossible (id 26) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  533 naked-single-x: f-624,f-502,f-1,f-319,*,f-221,*
+==> f-626   (impossible (id 18) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  534 naked-single-group: f-624,f-502,f-1,f-319,*,f-347,*
+==> f-627   (impossible (id 30) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  535 naked-single-group: f-624,f-502,f-1,f-319,*,f-333,*
+==> f-628   (impossible (id 29) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  536 naked-single-group: f-624,f-502,f-1,f-319,*,f-305,*
+==> f-629   (impossible (id 27) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  537 naked-single-column: f-624,f-502,f-1,f-319,*,f-95,*
+==> f-630   (impossible (id 4) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  538 naked-single-group: f-624,f-502,f-1,f-241,*,f-269,*
+==> f-631   (impossible (id 23) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  539 begin-elimination: f-624,*
+<== f-624   (phase match)
+==> f-632   (phase elimination)
+FIRE  540 eliminate-employed: f-632,f-630,*,*,*,f-95,*
+<== f-630   (impossible (id 4) (value 2) (rank 1) (reason "Naked Single"))
+<== f-95    (possible (row 2) (column 1) (value 2) (group 1) (diagonal 0) (id 4))
+FIRE  541 remove-unsolved: f-632,f-105,f-103,*
+<== f-105   (unsolved (row 2) (column 1))
+FIRE  542 eliminate-employed: f-632,f-626,*,*,*,f-221,*
+<== f-626   (impossible (id 18) (value 2) (rank 1) (reason "Naked Single"))
+<== f-221   (possible (row 4) (column 3) (value 2) (group 3) (diagonal 2) (id 18))
+FIRE  543 remove-unsolved: f-632,f-231,f-227,*
+<== f-231   (unsolved (row 4) (column 3))
+FIRE  544 eliminate-employed: f-632,f-631,*,*,*,f-269,*
+<== f-631   (impossible (id 23) (value 5) (rank 1) (reason "Naked Single"))
+<== f-269   (possible (row 4) (column 5) (value 5) (group 4) (diagonal 0) (id 23))
+FIRE  545 remove-unsolved: f-632,f-273,f-261,*
+<== f-273   (unsolved (row 4) (column 5))
+FIRE  546 eliminate-employed: f-632,f-625,*,*,*,f-291,*
+<== f-625   (impossible (id 26) (value 2) (rank 1) (reason "Naked Single"))
+<== f-291   (possible (row 5) (column 2) (value 2) (group 5) (diagonal 2) (id 26))
+FIRE  547 remove-unsolved: f-632,f-301,f-289,*
+<== f-301   (unsolved (row 5) (column 2))
+FIRE  548 eliminate-employed: f-632,f-629,*,*,*,f-305,*
+<== f-629   (impossible (id 27) (value 2) (rank 1) (reason "Naked Single"))
+<== f-305   (possible (row 5) (column 3) (value 2) (group 5) (diagonal 0) (id 27))
+FIRE  549 eliminate-employed: f-632,f-628,*,*,*,f-333,*
+<== f-628   (impossible (id 29) (value 2) (rank 1) (reason "Naked Single"))
+<== f-333   (possible (row 6) (column 2) (value 2) (group 5) (diagonal 0) (id 29))
+FIRE  550 eliminate-employed: f-632,f-627,*,*,*,f-347,*
+<== f-627   (impossible (id 30) (value 2) (rank 1) (reason "Naked Single"))
+<== f-347   (possible (row 6) (column 3) (value 2) (group 5) (diagonal 0) (id 30))
+FIRE  551 elimination-done: f-632,*
+<== f-632   (phase elimination)
+==> f-633   (phase match)
+FIRE  552 naked-single-group: f-633,f-502,f-1,f-289,*,f-331,*
+==> f-634   (impossible (id 29) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  553 naked-single-row: f-633,f-502,f-1,f-289,*,f-387,*
+==> f-635   (impossible (id 33) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  554 naked-single-row: f-633,f-502,f-1,f-289,*,f-373,*
+==> f-636   (impossible (id 32) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  555 naked-single-group: f-633,f-502,f-1,f-261,*,f-275,*
+==> f-637   (impossible (id 24) (value 1) (rank 1) (reason "Naked Single"))
+FIRE  556 naked-single-group: f-633,f-502,f-1,f-227,*,f-213,*
+==> f-638   (impossible (id 17) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  557 naked-single-column: f-633,f-502,f-1,f-227,*,f-353,*
+==> f-639   (impossible (id 30) (value 5) (rank 1) (reason "Naked Single"))
+FIRE  558 naked-single-group: f-633,f-502,f-1,f-103,*,f-131,*
+==> f-640   (impossible (id 6) (value 6) (rank 1) (reason "Naked Single"))
+FIRE  559 begin-elimination: f-633,*
+<== f-633   (phase match)
+==> f-641   (phase elimination)
+FIRE  560 eliminate-employed: f-641,f-640,*,*,*,f-131,*
+<== f-640   (impossible (id 6) (value 6) (rank 1) (reason "Naked Single"))
+<== f-131   (possible (row 2) (column 3) (value 6) (group 1) (diagonal 0) (id 6))
+FIRE  561 eliminate-employed: f-641,f-638,*,*,*,f-213,*
+<== f-638   (impossible (id 17) (value 5) (rank 1) (reason "Naked Single"))
+<== f-213   (possible (row 4) (column 2) (value 5) (group 3) (diagonal 0) (id 17))
+FIRE  562 remove-unsolved: f-641,f-217,f-207,*
+<== f-217   (unsolved (row 4) (column 2))
+FIRE  563 eliminate-employed: f-641,f-637,*,*,*,f-275,*
+<== f-637   (impossible (id 24) (value 1) (rank 1) (reason "Naked Single"))
+<== f-275   (possible (row 4) (column 6) (value 1) (group 4) (diagonal 0) (id 24))
+FIRE  564 remove-unsolved: f-641,f-287,f-279,*
+<== f-287   (unsolved (row 4) (column 6))
+FIRE  565 eliminate-employed: f-641,f-634,*,*,*,f-331,*
+<== f-634   (impossible (id 29) (value 1) (rank 1) (reason "Naked Single"))
+<== f-331   (possible (row 6) (column 2) (value 1) (group 5) (diagonal 0) (id 29))
+FIRE  566 eliminate-employed: f-641,f-639,*,*,*,f-353,*
+<== f-639   (impossible (id 30) (value 5) (rank 1) (reason "Naked Single"))
+<== f-353   (possible (row 6) (column 3) (value 5) (group 5) (diagonal 0) (id 30))
+FIRE  567 remove-unsolved: f-641,f-357,f-351,*
+<== f-357   (unsolved (row 6) (column 3))
+FIRE  568 eliminate-employed: f-641,f-636,*,*,*,f-373,*
+<== f-636   (impossible (id 32) (value 1) (rank 1) (reason "Naked Single"))
+<== f-373   (possible (row 5) (column 5) (value 1) (group 6) (diagonal 1) (id 32))
+FIRE  569 remove-unsolved: f-641,f-385,f-375,*
+<== f-385   (unsolved (row 5) (column 5))
+FIRE  570 eliminate-employed: f-641,f-635,*,*,*,f-387,*
+<== f-635   (impossible (id 33) (value 1) (rank 1) (reason "Naked Single"))
+<== f-387   (possible (row 5) (column 6) (value 1) (group 6) (diagonal 0) (id 33))
+FIRE  571 remove-unsolved: f-641,f-399,f-393,*
+<== f-399   (unsolved (row 5) (column 6))
+FIRE  572 elimination-done: f-641,*
+<== f-641   (phase elimination)
+==> f-642   (phase match)
+FIRE  573 naked-single-x: f-642,f-502,f-1,f-375,*,f-109,*
+==> f-643   (impossible (id 5) (value 2) (rank 1) (reason "Naked Single"))
+FIRE  574 naked-single-group: f-642,f-502,f-1,f-393,*,f-421,*
+==> f-644   (impossible (id 36) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  575 naked-single-row: f-642,f-502,f-1,f-393,*,f-309,*
+==> f-645   (impossible (id 27) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  576 naked-single-group: f-642,f-502,f-1,f-351,*,f-337,*
+==> f-646   (impossible (id 29) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  577 naked-single-column: f-642,f-502,f-1,f-351,*,f-127,*
+==> f-647   (impossible (id 6) (value 4) (rank 1) (reason "Naked Single"))
+FIRE  578 begin-elimination: f-642,*
+<== f-642   (phase match)
+==> f-648   (phase elimination)
+FIRE  579 eliminate-employed: f-648,f-643,*,*,*,f-109,*
+<== f-643   (impossible (id 5) (value 2) (rank 1) (reason "Naked Single"))
+<== f-109   (possible (row 2) (column 2) (value 2) (group 1) (diagonal 1) (id 5))
+FIRE  580 remove-unsolved: f-648,f-119,f-113,*
+<== f-119   (unsolved (row 2) (column 2))
+FIRE  581 eliminate-employed: f-648,f-647,*,*,*,f-127,*
+<== f-647   (impossible (id 6) (value 4) (rank 1) (reason "Naked Single"))
+<== f-127   (possible (row 2) (column 3) (value 4) (group 1) (diagonal 0) (id 6))
+FIRE  582 remove-unsolved: f-648,f-133,f-123,*
+<== f-133   (unsolved (row 2) (column 3))
+FIRE  583 eliminate-employed: f-648,f-645,*,*,*,f-309,*
+<== f-645   (impossible (id 27) (value 4) (rank 1) (reason "Naked Single"))
+<== f-309   (possible (row 5) (column 3) (value 4) (group 5) (diagonal 0) (id 27))
+FIRE  584 remove-unsolved: f-648,f-315,f-313,*
+<== f-315   (unsolved (row 5) (column 3))
+FIRE  585 eliminate-employed: f-648,f-646,*,*,*,f-337,*
+<== f-646   (impossible (id 29) (value 4) (rank 1) (reason "Naked Single"))
+<== f-337   (possible (row 6) (column 2) (value 4) (group 5) (diagonal 0) (id 29))
+FIRE  586 remove-unsolved: f-648,f-343,f-339,*
+<== f-343   (unsolved (row 6) (column 2))
+FIRE  587 eliminate-employed: f-648,f-644,*,*,*,f-421,*
+<== f-644   (impossible (id 36) (value 4) (rank 1) (reason "Naked Single"))
+<== f-421   (possible (row 6) (column 6) (value 4) (group 6) (diagonal 1) (id 36))
+FIRE  588 remove-unsolved: f-648,f-427,f-415,*
+<== f-427   (unsolved (row 6) (column 6))
+FIRE  589 elimination-done: f-648,*
+<== f-648   (phase elimination)
+==> f-649   (phase match)
+FIRE  590 next-rank-not-unsolved: f-649,*,f-502,*,f-2,*,*
+==> f-650   (rank (value 2) (process no))
+FIRE  591 next-rank-not-unsolved: f-649,*,f-650,*,f-3,*,*
+==> f-651   (rank (value 3) (process no))
+FIRE  592 next-rank-not-unsolved: f-649,*,f-651,*,f-4,*,*
+==> f-652   (rank (value 4) (process no))
+FIRE  593 next-rank-not-unsolved: f-649,*,f-652,*,f-5,*,*
+==> f-653   (rank (value 5) (process no))
+FIRE  594 next-rank-not-unsolved: f-649,*,f-653,*,f-6,*,*
+==> f-654   (rank (value 6) (process no))
+FIRE  595 next-rank-not-unsolved: f-649,*,f-654,*,f-7,*,*
+==> f-655   (rank (value 7) (process no))
+FIRE  596 next-rank-not-unsolved: f-649,*,f-655,*,f-8,*,*
+==> f-656   (rank (value 8) (process no))
+FIRE  597 next-rank-not-unsolved: f-649,*,f-656,*,f-9,*,*
+==> f-657   (rank (value 9) (process no))
+FIRE  598 next-rank-not-unsolved: f-649,*,f-657,*,f-10,*,*
+==> f-658   (rank (value 10) (process no))
+FIRE  599 next-rank-not-unsolved: f-649,*,f-658,*,f-11,*,*
+==> f-659   (rank (value 11) (process no))
+FIRE  600 next-rank-not-unsolved: f-649,*,f-659,*,f-12,*,*
+==> f-660   (rank (value 12) (process no))
+FIRE  601 next-rank-not-unsolved: f-649,*,f-660,*,f-13,*,*
+==> f-661   (rank (value 13) (process no))
+FIRE  602 next-rank-not-unsolved: f-649,*,f-661,*,f-14,*,*
+==> f-662   (rank (value 14) (process no))
+FIRE  603 next-rank-not-unsolved: f-649,*,f-662,*,f-15,*,*
+==> f-663   (rank (value 15) (process no))
+FIRE  604 next-rank-not-unsolved: f-649,*,f-663,*,f-16,*,*
+==> f-664   (rank (value 16) (process no))
+FIRE  605 next-rank-not-unsolved: f-649,*,f-664,*,f-17,*,*
+==> f-665   (rank (value 17) (process no))
+FIRE  606 next-rank-not-unsolved: f-649,*,f-665,*,f-18,*,*
+==> f-666   (rank (value 18) (process no))
+FIRE  607 begin-output: f-649,*,f-666,*,*
+<== f-649   (phase match)
+==> f-667   (phase final-output)
+==> f-668   (print-position 1 1)
+FIRE  608 print-final: f-667
+
+The solution is: 
+
+   FIRE  609 print-position-value-found: f-667,f-668,f-73,*,f-27
+==> f-669   (position-printed 1 1)
+5FIRE  610 next-position-column: f-667,f-27,f-668,f-669
+ <== f-668   (print-position 1 1)
+<== f-669   (position-printed 1 1)
+==> f-670   (print-position 1 2)
+FIRE  611 print-position-value-found: f-667,f-670,f-83,*,f-27
+==> f-671   (position-printed 1 2)
+3FIRE  612 next-position-column: f-667,f-27,f-670,f-671
+ <== f-670   (print-position 1 2)
+<== f-671   (position-printed 1 2)
+==> f-672   (print-position 1 3)
+FIRE  613 print-position-value-found: f-667,f-672,f-30,*,f-27
+==> f-673   (position-printed 1 3)
+1FIRE  614 next-position-column: f-667,f-27,f-672,f-673
+  <== f-672   (print-position 1 3)
+<== f-673   (position-printed 1 3)
+==> f-674   (print-position 1 4)
+FIRE  615 print-position-value-found: f-667,f-674,f-137,*,f-27
+==> f-675   (position-printed 1 4)
+2FIRE  616 next-position-column: f-667,f-27,f-674,f-675
+ <== f-674   (print-position 1 4)
+<== f-675   (position-printed 1 4)
+==> f-676   (print-position 1 5)
+FIRE  617 print-position-value-found: f-667,f-676,f-155,*,f-27
+==> f-677   (position-printed 1 5)
+4FIRE  618 next-position-column: f-667,f-27,f-676,f-677
+ <== f-676   (print-position 1 5)
+<== f-677   (position-printed 1 5)
+==> f-678   (print-position 1 6)
+FIRE  619 print-position-value-found: f-667,f-678,f-173,*,f-27
+==> f-679   (position-printed 1 6)
+6FIRE  620 next-position-row: f-667,f-27,f-678,f-679
+
+   <== f-678   (print-position 1 6)
+<== f-679   (position-printed 1 6)
+==> f-680   (print-position 2 1)
+FIRE  621 print-position-value-found: f-667,f-680,f-103,*,f-27
+==> f-681   (position-printed 2 1)
+6FIRE  622 next-position-column: f-667,f-27,f-680,f-681
+ <== f-680   (print-position 2 1)
+<== f-681   (position-printed 2 1)
+==> f-682   (print-position 2 2)
+FIRE  623 print-position-value-found: f-667,f-682,f-113,*,f-27
+==> f-683   (position-printed 2 2)
+4FIRE  624 next-position-column: f-667,f-27,f-682,f-683
+ <== f-682   (print-position 2 2)
+<== f-683   (position-printed 2 2)
+==> f-684   (print-position 2 3)
+FIRE  625 print-position-value-found: f-667,f-684,f-123,*,f-27
+==> f-685   (position-printed 2 3)
+2FIRE  626 next-position-column: f-667,f-27,f-684,f-685
+  <== f-684   (print-position 2 3)
+<== f-685   (position-printed 2 3)
+==> f-686   (print-position 2 4)
+FIRE  627 print-position-value-found: f-667,f-686,f-37,*,f-27
+==> f-687   (position-printed 2 4)
+1FIRE  628 next-position-column: f-667,f-27,f-686,f-687
+ <== f-686   (print-position 2 4)
+<== f-687   (position-printed 2 4)
+==> f-688   (print-position 2 5)
+FIRE  629 print-position-value-found: f-667,f-688,f-38,*,f-27
+==> f-689   (position-printed 2 5)
+3FIRE  630 next-position-column: f-667,f-27,f-688,f-689
+ <== f-688   (print-position 2 5)
+<== f-689   (position-printed 2 5)
+==> f-690   (print-position 2 6)
+FIRE  631 print-position-value-found: f-667,f-690,f-39,*,f-27
+==> f-691   (position-printed 2 6)
+5FIRE  632 next-position-row: f-667,f-27,f-690,f-691
+
+   <== f-690   (print-position 2 6)
+<== f-691   (position-printed 2 6)
+==> f-692   (print-position 3 1)
+FIRE  633 print-position-value-found: f-667,f-692,f-177,*,f-27
+==> f-693   (position-printed 3 1)
+1FIRE  634 next-position-column: f-667,f-27,f-692,f-693
+ <== f-692   (print-position 3 1)
+<== f-693   (position-printed 3 1)
+==> f-694   (print-position 3 2)
+FIRE  635 print-position-value-found: f-667,f-694,f-41,*,f-27
+==> f-695   (position-printed 3 2)
+6FIRE  636 next-position-column: f-667,f-27,f-694,f-695
+ <== f-694   (print-position 3 2)
+<== f-695   (position-printed 3 2)
+==> f-696   (print-position 3 3)
+FIRE  637 print-position-value-found: f-667,f-696,f-195,*,f-27
+==> f-697   (position-printed 3 3)
+3FIRE  638 next-position-column: f-667,f-27,f-696,f-697
+  <== f-696   (print-position 3 3)
+<== f-697   (position-printed 3 3)
+==> f-698   (print-position 3 4)
+FIRE  639 print-position-value-found: f-667,f-698,f-46,*,f-27
+==> f-699   (position-printed 3 4)
+4FIRE  640 next-position-column: f-667,f-27,f-698,f-699
+ <== f-698   (print-position 3 4)
+<== f-699   (position-printed 3 4)
+==> f-700   (print-position 3 5)
+FIRE  641 print-position-value-found: f-667,f-700,f-241,*,f-27
+==> f-701   (position-printed 3 5)
+5FIRE  642 next-position-column: f-667,f-27,f-700,f-701
+ <== f-700   (print-position 3 5)
+<== f-701   (position-printed 3 5)
+==> f-702   (print-position 3 6)
+FIRE  643 print-position-value-found: f-667,f-702,f-48,*,f-27
+==> f-703   (position-printed 3 6)
+2FIRE  644 next-position-row: f-667,f-27,f-702,f-703
+
+
+   <== f-702   (print-position 3 6)
+<== f-703   (position-printed 3 6)
+==> f-704   (print-position 4 1)
+FIRE  645 print-position-value-found: f-667,f-704,f-43,*,f-27
+==> f-705   (position-printed 4 1)
+4FIRE  646 next-position-column: f-667,f-27,f-704,f-705
+ <== f-704   (print-position 4 1)
+<== f-705   (position-printed 4 1)
+==> f-706   (print-position 4 2)
+FIRE  647 print-position-value-found: f-667,f-706,f-207,*,f-27
+==> f-707   (position-printed 4 2)
+2FIRE  648 next-position-column: f-667,f-27,f-706,f-707
+ <== f-706   (print-position 4 2)
+<== f-707   (position-printed 4 2)
+==> f-708   (print-position 4 3)
+FIRE  649 print-position-value-found: f-667,f-708,f-227,*,f-27
+==> f-709   (position-printed 4 3)
+5FIRE  650 next-position-column: f-667,f-27,f-708,f-709
+  <== f-708   (print-position 4 3)
+<== f-709   (position-printed 4 3)
+==> f-710   (print-position 4 4)
+FIRE  651 print-position-value-found: f-667,f-710,f-257,*,f-27
+==> f-711   (position-printed 4 4)
+6FIRE  652 next-position-column: f-667,f-27,f-710,f-711
+ <== f-710   (print-position 4 4)
+<== f-711   (position-printed 4 4)
+==> f-712   (print-position 4 5)
+FIRE  653 print-position-value-found: f-667,f-712,f-261,*,f-27
+==> f-713   (position-printed 4 5)
+1FIRE  654 next-position-column: f-667,f-27,f-712,f-713
+ <== f-712   (print-position 4 5)
+<== f-713   (position-printed 4 5)
+==> f-714   (print-position 4 6)
+FIRE  655 print-position-value-found: f-667,f-714,f-279,*,f-27
+==> f-715   (position-printed 4 6)
+3FIRE  656 next-position-row: f-667,f-27,f-714,f-715
+
+   <== f-714   (print-position 4 6)
+<== f-715   (position-printed 4 6)
+==> f-716   (print-position 5 1)
+FIRE  657 print-position-value-found: f-667,f-716,f-52,*,f-27
+==> f-717   (position-printed 5 1)
+3FIRE  658 next-position-column: f-667,f-27,f-716,f-717
+ <== f-716   (print-position 5 1)
+<== f-717   (position-printed 5 1)
+==> f-718   (print-position 5 2)
+FIRE  659 print-position-value-found: f-667,f-718,f-289,*,f-27
+==> f-719   (position-printed 5 2)
+1FIRE  660 next-position-column: f-667,f-27,f-718,f-719
+ <== f-718   (print-position 5 2)
+<== f-719   (position-printed 5 2)
+==> f-720   (print-position 5 3)
+FIRE  661 print-position-value-found: f-667,f-720,f-313,*,f-27
+==> f-721   (position-printed 5 3)
+6FIRE  662 next-position-column: f-667,f-27,f-720,f-721
+  <== f-720   (print-position 5 3)
+<== f-721   (position-printed 5 3)
+==> f-722   (print-position 5 4)
+FIRE  663 print-position-value-found: f-667,f-722,f-367,*,f-27
+==> f-723   (position-printed 5 4)
+5FIRE  664 next-position-column: f-667,f-27,f-722,f-723
+ <== f-722   (print-position 5 4)
+<== f-723   (position-printed 5 4)
+==> f-724   (print-position 5 5)
+FIRE  665 print-position-value-found: f-667,f-724,f-375,*,f-27
+==> f-725   (position-printed 5 5)
+2FIRE  666 next-position-column: f-667,f-27,f-724,f-725
+ <== f-724   (print-position 5 5)
+<== f-725   (position-printed 5 5)
+==> f-726   (print-position 5 6)
+FIRE  667 print-position-value-found: f-667,f-726,f-393,*,f-27
+==> f-727   (position-printed 5 6)
+4FIRE  668 next-position-row: f-667,f-27,f-726,f-727
+
+   <== f-726   (print-position 5 6)
+<== f-727   (position-printed 5 6)
+==> f-728   (print-position 6 1)
+FIRE  669 print-position-value-found: f-667,f-728,f-319,*,f-27
+==> f-729   (position-printed 6 1)
+2FIRE  670 next-position-column: f-667,f-27,f-728,f-729
+ <== f-728   (print-position 6 1)
+<== f-729   (position-printed 6 1)
+==> f-730   (print-position 6 2)
+FIRE  671 print-position-value-found: f-667,f-730,f-339,*,f-27
+==> f-731   (position-printed 6 2)
+5FIRE  672 next-position-column: f-667,f-27,f-730,f-731
+ <== f-730   (print-position 6 2)
+<== f-731   (position-printed 6 2)
+==> f-732   (print-position 6 3)
+FIRE  673 print-position-value-found: f-667,f-732,f-351,*,f-27
+==> f-733   (position-printed 6 3)
+4FIRE  674 next-position-column: f-667,f-27,f-732,f-733
+  <== f-732   (print-position 6 3)
+<== f-733   (position-printed 6 3)
+==> f-734   (print-position 6 4)
+FIRE  675 print-position-value-found: f-667,f-734,f-405,*,f-27
+==> f-735   (position-printed 6 4)
+3FIRE  676 next-position-column: f-667,f-27,f-734,f-735
+ <== f-734   (print-position 6 4)
+<== f-735   (position-printed 6 4)
+==> f-736   (print-position 6 5)
+FIRE  677 print-position-value-found: f-667,f-736,f-62,*,f-27
+==> f-737   (position-printed 6 5)
+6FIRE  678 next-position-column: f-667,f-27,f-736,f-737
+ <== f-736   (print-position 6 5)
+<== f-737   (position-printed 6 5)
+==> f-738   (print-position 6 6)
+FIRE  679 print-position-value-found: f-667,f-738,f-415,*,f-27
+==> f-739   (position-printed 6 6)
+1FIRE  680 output-done-rule-listing: f-667,f-27,f-738,f-739,*
+
+
+Rules used:
+
+<== f-667   (phase final-output)
+<== f-738   (print-position 6 6)
+<== f-739   (position-printed 6 6)
+==> f-740   (phase list-rules)
+FIRE  681 list-rule: f-740,f-590,*
+   Naked Single
+<== f-590   (technique-employed (reason "Naked Single") (rank 1))
+FIRE  682 list-rule-done: f-740
+
+<== f-740   (phase list-rules)
+CLIPS> 
